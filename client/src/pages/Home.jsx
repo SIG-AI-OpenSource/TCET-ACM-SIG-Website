@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="">
         <img
-          src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1725460247/WhatsApp_Image_2024-09-04_at_19.41.40_xpblwz.jpg"
+          src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1725550158/Designer_20_ap4er8.png"
           alt="Descriptive Alt Text"
           className="w-full h-[100vh] object-cover"
         />
