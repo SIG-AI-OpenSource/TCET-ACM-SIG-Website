@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Events from "./pages/Events";
+import Eventdetail from "./components/Eventdetail";
 
 const appRouter = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/events",
         element: <Events />,
+      },
+      {
+        path: "/events/:id",
+        element: <Eventdetail />,
       },
     ],
   },
