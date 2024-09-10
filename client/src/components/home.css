@@ -1,0 +1,172 @@
+* {
+  font-weight: 100;
+}
+
+.about_us {
+  background-color: black;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-bottom: 7%;
+}
+
+#head_of_about_us {
+  font-size: 1.5rem;
+  color: rgb(119, 0, 234);
+}
+
+.content_about_us {
+  display: flex;
+}
+
+.content_about_us_left {
+  width: 45%;
+  height: 80%;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.content_about_us_right {
+  width: 45%;
+  height: 80%;
+  color: white;
+  margin-left: 7%;
+  font-size: 3.5rem;
+}
+
+#content_about_us_right_h1 {
+  text-align: top;
+  margin: 0;
+  font-size: 7rem;
+  display: flex;
+}
+
+#events {
+  font-size: 2rem;
+  margin-left: 3%;
+  margin-top: 11%;
+}
+
+.publications {
+  background-color: black;
+  padding-top: 4%;
+  padding-left: 2%;
+  padding-bottom: 6%;
+}
+
+.mag_1,
+.mag_2,
+.mag_3 {
+  background-color: black;
+  width: 32%;
+  height: 38rem;
+  margin: 1.5%;
+  border-radius: 3%;
+  border: 1px solid gray;
+}
+
+.pic_one,
+.pic_two,
+.pic_three {
+  margin: 5%;
+  border: 1px solid gray;
+  border-radius: 5%;
+  width: 90%;
+  height: 70%;
+  background-size: cover;
+}
+
+.pic_one {
+  background-image: url("asset/1.avif");
+}
+
+.pic_two {
+  background-image: url("asset/2.avif");
+}
+
+.pic_three {
+  background-image: url("asset/3.avif");
+}
+
+#abt:hover {
+  color: rgb(119, 0, 234);
+  transition: 0.5s;
+}
+
+#grad1 {
+  background-color: black;
+  background-image: linear-gradient(black, rgb(119, 0, 234));
+}
+
+.image-container {
+  position: relative;
+  width: 850px;
+  height: 500px;
+  padding-bottom: 4%;
+  margin-left: 22%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  opacity: 0;
+  animation: imageLoop 8s infinite;
+}
+
+/* home.css */
+
+/* Container styles */
+.gallery-container {
+  background-color: black;
+  height: 20%;
+  width: 100%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header styles */
+.gallery-header {
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+/* Image container styles */
+.image-container {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Image styles */
+.image {
+  width: 800px;
+  height: 500px;
+  border-radius: 5%;
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Optional: Add animation to images */
+.image {
+  opacity: 1;
+  /* To add fade-in effect */
+}
+
+/* Optional: Adjustments for smaller screens (if needed) */
+@media (max-width: 768px) {
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
