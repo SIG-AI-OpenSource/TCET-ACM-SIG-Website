@@ -1,44 +1,47 @@
 import React, { useState } from "react";
 import "./home.css";
+import images from "./images.js";
 
-// Import images directly
-import img1 from "../components/asset/1-hover.jpg";
-import img2 from "../components/asset/2-hover.avif";
-import img3 from "../components/asset/3-hover.avif";
+import CustomSlider from "./customslider.jsx";
+
+// // Import images directly
+// import img1 from "../components/asset/1-hover.jpg";
+// import img2 from "../components/asset/2-hover.avif";
+// import img3 from "../components/asset/3-hover.avif";
 
 const Gallery = () => {
   // State to keep track of the current image index
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Images array
-  const images = [
-    { src: img1, alt: "Image 1" },
-    { src: img2, alt: "Image 2" },
-    { src: img3, alt: "Image 3" },
-  ];
+  // // Images array
+  // const images = [
+  //   { src: img1, alt: "Image 1" },
+  //   { src: img2, alt: "Image 2" },
+  //   { src: img3, alt: "Image 3" },
+  // ];
 
-  // Handlers for image navigation
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  // // Handlers for image navigation
+  // const nextImage = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  // };
 
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  // const prevImage = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  // Handle hover event
-  const handleHover = () => {
-    // Set interval to change image every 2 seconds
-    const interval = setInterval(() => {
-      nextImage();
-    }, 2000);
+  // // Handle hover event
+  // const handleHover = () => {
+  //   // Set interval to change image every 2 seconds
+  //   const interval = setInterval(() => {
+  //     nextImage();
+  //   }, 2000);
 
-    // Clear the interval when the user stops hovering
-    const stopHover = () => clearInterval(interval);
-    document.querySelector("div").addEventListener("mouseleave", stopHover);
-  };
+  //   // Clear the interval when the user stops hovering
+  //   const stopHover = () => clearInterval(interval);
+  //   document.querySelector("div").addEventListener("mouseleave", stopHover);
+  // };
 
   return (
     <div
@@ -48,7 +51,7 @@ const Gallery = () => {
         width: "100%",
         paddingBottom: "6%",
       }}
-      onMouseEnter={handleHover} // Trigger image change on hover
+      // onMouseEnter={handleHover} // Trigger image change on hover
     >
       <h1
         style={{
@@ -60,7 +63,12 @@ const Gallery = () => {
       >
         Gallery
       </h1>
-      <div className="image-container" style={{ textAlign: "center" }}>
+      <CustomSlider>
+        {images.map((image, index) => {
+          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
+        })}
+      </CustomSlider>
+      {/* <div className="image-container" style={{ textAlign: "center" }}>
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
@@ -72,7 +80,7 @@ const Gallery = () => {
             marginBottom: "20px",
           }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
