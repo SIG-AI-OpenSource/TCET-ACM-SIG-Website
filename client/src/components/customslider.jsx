@@ -69,7 +69,7 @@ function CustomCarousel({ children }) {
         );
       })}
 
-      <div className="container__slider__links">
+      {/* <div className="container__slider__links">
         {children.map((item, index) => {
           return (
             <button
@@ -86,7 +86,7 @@ function CustomCarousel({ children }) {
             ></button>
           );
         })}
-      </div>
+      </div> */}
 
       <button
         className="slider__btn-next"

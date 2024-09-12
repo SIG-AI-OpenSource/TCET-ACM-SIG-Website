@@ -12,10 +12,12 @@
   "dependencies": {
     "framer": "^2.4.1",
     "framer-motion": "^11.5.4",
+    "lucide-react": "^0.440.0",
     "motion": "^10.18.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.1",
     "react-lorem-ipsum": "^1.4.10",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.26.1",
