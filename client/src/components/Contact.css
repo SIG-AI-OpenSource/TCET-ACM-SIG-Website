@@ -1,0 +1,167 @@
+/* Main container for the contact page */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  background-color: #000; /* Background for the right section */
+}
+
+.contact-left {
+  background-color: #6d3eff; /* Purple background */
+  color: rgb(0, 0, 0); /* Black text */
+  padding: 80px;
+  width: 50%; /* Half width for the left section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.contact-right {
+  background-color: #000; /* Black background */
+  color: #6d3eff; /* Purple text */
+  padding: 50px;
+  width: 50%; /* Half width for the right section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 88px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.detail-logo {
+  margin-right: 15px; /* Space between logo and text */
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+}
+
+.detail-item i {
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.social-links i {
+  font-size: 30px;
+  margin-right: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.social-links i:hover {
+  color: #ddd;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adds space between the input rows */
+}
+
+.field-item {
+  display: flex;
+  flex-direction: column;
+  width: 32%; /* Adjust the width for each input field */
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px; /* Adds space between the label and input */
+  color: #ffffff77; /* White label text */
+}
+
+/* Input and Textarea styling */
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+/* Styling for the Message textarea */
+textarea {
+  width: 100%; /* Full width for message box */
+  margin-bottom: 20px;
+  height: 150px; /* Height remains */
+  resize: none;
+}
+
+/* Wider textarea for the message box */
+textarea#message {
+  width: 653px; /* Full width across the form */
+  height: 100px; /* Slightly taller */
+}
+
+/* Button styling */
+button {
+  padding: 12px 20px;
+  background-color: #212024;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #414047;
+}
+
+/* Centering the Contact heading in the right section */
+.contact-right h2 {
+  text-align: center; /* Center the heading text */
+  font-size: 46px;
+  margin-bottom: 60px;
+  color: #6d3eff; /* Purple color for the heading text */
+  font-weight: bold;
+}
+.contact-links {
+  display: flex;
+  gap: 20px; /* Space between logos */
+  margin-top: 20px; /* Space from the phone number section */
+}
+
+.link-logo {
+  font-size: 30px; /* Adjust the size as needed */
+  color: #000000; /* Match the color with your design */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-top: 40px;
+}
+
+.link-logo:hover {
+  color: #ffffff; /* Change color on hover */
+}

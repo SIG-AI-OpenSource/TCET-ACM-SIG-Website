@@ -1,0 +1,177 @@
+.two {
+  background-color: black;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  padding: 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px; /* Adds space between the two sections */
+}
+
+.first_section,
+.second_section {
+  margin-left: 100px;
+}
+
+.faculty,
+.faculty2 {
+  /* margin-left: 50px; */
+  width: 54%;
+  background-color: black;
+  padding-right: 20px;
+  color: white;
+}
+
+.desc1,
+.desc2 {
+  margin-right: 100px;
+}
+
+.container1,
+.container2 {
+  margin-right: 50px;
+  height: 375px;
+  width: 350px;
+  background: linear-gradient(blueviolet, black);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 50px; */
+  margin-right: 50px; /*Space between image and faculty text*/
+}
+
+.image,
+.image2 {
+  height: 200px;
+  width: 200px;
+}
+
+.image img,
+.image2 img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* Core members */
+
+.core {
+  background: radial-gradient(circle, #613fe7 0%, #000000 70%);
+  text-align: center;
+  padding: 20px;
+}
+
+.Jtitle {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.Jteam-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.jrole {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: white;
+}
+
+.name {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .Jteam-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.team-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.team-member {
+  width: 250px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.role {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: white;
+}
+
+.diya {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.title2 {
+  font-size: 2.9rem;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-top: 12px;
+  color: white;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+/* Icons */
+
+.icon-container {
+  display: flex; /* Use flexbox to arrange icons in a row */
+  /* justify-content: center; Center the icons horizontally */
+  gap: 15px; /* Add some space between icons */
+  margin-top: 20px; /* Optional: margin to separate from other elements */
+}
+
+.icon-container svg {
+  font-size: 20px; /* Adjust icon size */
+  color: #fff; /* Set the color for the icons */
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.icon-container svg:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
