@@ -15,7 +15,7 @@ const Home = () => {
     <>
       <div className="">
         <img
-          src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726159300/download_5_kmlvkm.png"
+          src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726159046/download_4_tvrrce.png"
           alt="Descriptive Alt Text"
           className="w-full h-[100vh] object-cover"
         />
@@ -23,12 +23,12 @@ const Home = () => {
         {/* Container for the text and button */}
         <div
           className="absolute top-0 left-0 w-full h-full flex flex-col items-start justify-center"
-          style={{ marginLeft: "40px", paddingTop: "0%" }}
+          style={{ marginLeft: "40px", paddingTop: "10%" }}
         >
           {/* Welcome Text */}
           <h1
             style={{
-              fontSize: "7rem",
+              fontSize: "6rem",
               color: "#000000",
               fontFamily: "'Clash Grotesk', sans-serif",
               fontWeight: "400",
@@ -40,7 +40,7 @@ const Home = () => {
           {/* TCET ACM-SIGAI Text */}
           <h2
             style={{
-              fontSize: "3.5rem",
+              fontSize: "3rem",
               color: "#000000",
               fontFamily: "'Inter', sans-serif",
               fontWeight: "500",
@@ -54,7 +54,7 @@ const Home = () => {
           {/* Student's Chapter Text */}
           <p
             style={{
-              fontSize: "2.5rem",
+              fontSize: "2rem",
               color: "#000000",
               fontFamily: "'Inter', sans-serif",
               fontWeight: "400",
