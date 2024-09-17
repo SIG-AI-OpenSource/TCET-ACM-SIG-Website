@@ -14,7 +14,7 @@ const fadeUpVariants = {
 
 const EventsComponent = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="eventtop">
       {/* Hero Image and Text */}
       <div className="relative z-0">
         <img

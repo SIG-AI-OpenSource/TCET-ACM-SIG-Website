@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Eventpost = () => {
-  const { data, loading, error } = useFetch("http://localhost:8000/events"); // Adjust the URL if needed
+  const { data, loading, error } = useFetch("http://localhost:8080/events"); // Adjust the URL if needed
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;

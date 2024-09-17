@@ -8,8 +8,8 @@
 }
 
 .contact-left {
-  background-color: #6d3eff; /* Purple background */
-  color: rgb(0, 0, 0); /* Black text */
+  background-color: #015B97; /* Purple background */
+  color: whitesmoke; /* Black text */
   padding: 80px;
   width: 50%; /* Half width for the left section */
   display: flex;
@@ -20,20 +20,21 @@
 }
 
 .contact-right {
-  background-color: #000; /* Black background */
-  color: #6d3eff; /* Purple text */
+  background-color: #1C0773; /* Black background */
+  color: whitesmoke; /* Purple text */
   padding: 50px;
   width: 50%; /* Half width for the right section */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 88px;
+  margin-bottom: 0px;
 }
 
-h2 {
+.contact-right h2 {
   font-size: 36px;
   margin-bottom: 20px;
   color: inherit;
+  color: whitesmoke !important;
 }
 
 p {
@@ -66,18 +67,23 @@ p {
 .social-links i {
   font-size: 30px;
   margin-right: 15px;
-  color: white;
+  color: whitesmoke !important;
   cursor: pointer;
 }
 
+.contact-links a{
+  color: white;
+}
+
 .social-links i:hover {
-  color: #ddd;
+  color: black;
 }
 
 /* Form Styles */
 .contact-form {
   display: flex;
   flex-direction: column;
+  color: whitesmoke;
 }
 
 .form-field {
@@ -95,7 +101,7 @@ p {
 label {
   font-size: 14px;
   margin-bottom: 5px; /* Adds space between the label and input */
-  color: #ffffff77; /* White label text */
+  color: whitesmoke; /* White label text */
 }
 
 /* Input and Textarea styling */
@@ -114,7 +120,7 @@ input {
 
 /* Styling for the Message textarea */
 textarea {
-  width: 100%; /* Full width for message box */
+  width: 80%; /* Full width for message box */
   margin-bottom: 20px;
   height: 150px; /* Height remains */
   resize: none;
@@ -122,7 +128,7 @@ textarea {
 
 /* Wider textarea for the message box */
 textarea#message {
-  width: 653px; /* Full width across the form */
+  width: 35.7rem; /* Full width across the form */
   height: 100px; /* Slightly taller */
 }
 
@@ -157,11 +163,103 @@ button:hover {
 
 .link-logo {
   font-size: 30px; /* Adjust the size as needed */
-  color: #000000; /* Match the color with your design */
+  color: white; /* Match the color with your design */
   transition: color 0.3s ease; /* Smooth color transition */
   margin-top: 40px;
 }
 
 .link-logo:hover {
-  color: #ffffff; /* Change color on hover */
+  color: #1C0773; /* Change color on hover */
+}
+
+@media(max-width:640px){
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 100vh; /*Full screen height*/
+    background-color: #000; /* Background for the right section */
+  }
+  .contact-left {
+    background-color: #015B97; /* Purple background */
+    color: whitesmoke; /* Black text */
+    /* padding: 80px; */
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    /* height: 100%; */
+    width: 100%; /* Half width for the left section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  .detail-logo {
+    margin-right: 15px; /* Space between logo and text */
+    width: 1.5rem; /* Adjust the size as needed */
+    height: 1.5rem; /* Adjust the size as needed */
+  }
+
+  .link-logo {
+    font-size: 1.6rem; /* Adjust the size as needed */
+    color: white; /* Match the color with your design */
+    transition: color 0.3s ease; /* Smooth color transition */
+    margin-top: 40px;
+  }
+  .contact-right {
+    background-color: #1C0773; /* Black background */
+    color: whitesmoke; /* Purple text */
+    /* padding: 50px; */
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%; /* Half width for the right section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  
+  textarea {
+    width: 3rem; /* Full width for message box */
+    margin-bottom: 10px;
+    height: 150px; /* Height remains */
+    resize: none;
+  }
+  textarea#message {
+    width: 100%; /* Full width across the form */
+    height: 100px; /* Slightly taller */
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-bottom: 20px; /* Adds space between the input rows */
+  }
+  
+  .field-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust the width for each input field */
+  }
+
+  .contact-right h2 {
+    text-align: center; /* Center the heading text */
+    font-size: 46px;
+    margin-bottom: 0px;
+    color: #6d3eff; /* Purple color for the heading text */
+    font-weight: bold;
+  }
+
 }

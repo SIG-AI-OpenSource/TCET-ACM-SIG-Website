@@ -1,51 +1,76 @@
 import React from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
+import {HashLink as Hlink} from "react-router-hash-link";
+import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "black" }}>
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          paddingTop: "0%",
-          paddingBottom: "5%",
-          color: "white",
-        }}
-      >
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.807415056768!2d72.87278298331742!3d19.20637003525048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e57647569d%3A0xc0aec329c82d3555!2sThakur%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1725606742168!5m2!1sen!2sin"
-            className="w-full h-[340px] border-0"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
+    <footer >
       <div style={{ display: "flex", gap: "25%" }} id="grad1">
         <div
           className="left_bottom"
-          style={{ marginLeft: "7%", color: "white", fontSize: "2rem" }}
+          style={{ }}
         >
-          <span>ACM SIGAI</span>
-          <br />
+          <span><Hlink smooth to="/#home" style={{fontWeight:"550"}}>
+        ACM SIGAI
+            </Hlink></span>
           <br />
           <br />
 
           <span id="abt" style={{ fontSize: "2.5rem" }}>
+            <Hlink smooth to="/#aboutus" style={{fontWeight:"550"}}>
             About
+            </Hlink>
           </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>Events</span>
+          <span style={{ fontSize: "2.5rem" }}>
+          <Hlink smooth to="/events/#eventtop" style={{fontWeight:"550"}}>
+          Events
+          </Hlink>
+          </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>Gallery</span>
+          <span style={{ fontSize: "2.5rem" }}>
+            <Hlink smooth to="/#gallery" style={{fontWeight:"550"}}>Gallery</Hlink>
+            </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>Contact Us</span>
+          <span style={{ fontSize: "2.5rem" }}>
+          <Hlink smooth to="/#contactus" style={{fontWeight:"550"}}>Contact Us</Hlink>
+          </span>
           <br />
           <br />
+          <div className="sm:hidden contact-links-footer">
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="link-logo-footer" />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="link-logo-footer" />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="link-logo-footer" />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="link-logo-footer" />
+            </a>
+          </div>
 
-          <span style={{ fontSize: "1.2rem" }}>
+          <span className="rightsReserved">
             {" "}
             &#169; 2024 All rights reserved
           </span>
@@ -54,26 +79,28 @@ const Footer = () => {
         </div>
         <div
           className="right_bottom"
-          style={{ marginLeft: "7%", color: "white", fontSize: "2rem" }}
         >
-          <span>TCET STUDENT CHAPTER</span>
-          <br />
+          <span>
+          <Hlink to="/team/#meetteam" className="studentchapter">TCET STUDENT CHAPTER
+          </Hlink>
+          </span>
           <br />
           <br />
 
-          <span id="abt" style={{ fontSize: "2.5rem" }}>
-            LinkedIn
+          <span id="abt">
+            <a href="https://www.linkedin.com/in/tcet-acm-sig-ai-9515072b9">
+            LinkedIn</a> 
           </span>
           <br />
-          <span id="abt" style={{ fontSize: "2.5rem" }}>
-            Instagram
+          <span id="abt">
+            <a href="https://www.instagram.com/tcet_acm.sigai/" >Instagram</a>
           </span>
           <br />
-          <span id="abt" style={{ fontSize: "2.5rem" }}>
+          <span id="abt">
             Facebook
           </span>
           <br />
-          <span id="abt" style={{ fontSize: "2.5rem" }}>
+          <span id="abt">
             Dribble
           </span>
         </div>

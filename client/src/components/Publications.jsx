@@ -3,76 +3,60 @@ import "./home.css";
 
 const Publications = () => {
   return (
-    <div className="publications">
-      <div style={{ display: "flex" }}>
-        <div style={{ color: "white", fontSize: "4rem", paddingLeft: "2rem" }}>
+    <div className="publications" id="publication">
+      <div className="titleyear w-screen">
+        <div  className="publicationstitle">
           Publications
         </div>
         <div
-          style={{
-            color: "rgb(119,0,234)",
-            marginLeft: "60%",
-            marginTop: "2%",
-            fontSize: "1.5rem",
-          }}
+          className="publicationyear"
         >
           2023-24
         </div>
       </div>
-      <div style={{ display: "flex", margin: "5%", marginRight: "8%" }}>
-        <div className="mag_1">
+      <div className="magazineblock group">
+        <div className="mag_1 cursor-pointer duration-500  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           <div className="pic_one"></div>
           <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+           
+             className="magazinetitle"
           >
             Tejas Vol 1
           </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.2rem",
-              marginTop: "6%",
-            }}
+          <p className="magazinepara"
           >
-            We start by gaining a deep understanding of your business goals.
-          </div>
+            We start by gaining a deep <br />
+             understanding of your <br /> business goals.
+          </p>
         </div>
-        <div className="mag_2">
-          <div className="pic_two"></div>
+        <div className="mag_2 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+          <div className="pic_two" ></div>
           <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+            
+             className="magazinetitle"
           >
             Tejas Vol 2
           </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.2rem",
-              marginTop: "6%",
-            }}
+          <p
+          className="magazinepara"
           >
-            Next, our team of experts develops tailored solutions.
-          </div>
+            Next, our team of experts <br /> develops tailored solutions.
+          </p>
         </div>
-        <div className="mag_3">
+        <div className="mag_3 duration-500 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           <div className="pic_three"></div>
           <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+            
+             className="magazinetitle"
           >
             Tejas Vol 3.1
           </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.3rem",
-              marginTop: "6%",
-            }}
+          <p
+          className="magazinepara"
           >
-            We leverage cutting-edge technology to implement seamlessly.
-          </div>
+            We leverage cutting-edge <br /> technology to implement 
+            <br />seamlessly.
+          </p>
         </div>
       </div>
       <div style={{ display: "flex", gap: "30%", marginTop: "9%" }}>

@@ -46,19 +46,21 @@ const Gallery = () => {
   return (
     <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "#C7E8FF",
         height: "20%",
         width: "100%",
         paddingBottom: "6%",
       }}
+      id="gallery"
       // onMouseEnter={handleHover} // Trigger image change on hover
     >
       <h1
         style={{
           fontSize: "6rem",
           textAlign: "center",
-          color: "white",
+          color: "black",
           marginTop: "0",
+          fontFamily:"inter",
         }}
       >
         Gallery

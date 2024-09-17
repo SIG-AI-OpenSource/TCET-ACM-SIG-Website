@@ -3,10 +3,11 @@ import "./Team.css"; // Make sure you have your CSS in place
 
 const Core = () => {
   return (
-    <div className="pb-10 bg-black">
+    <div className="pb-0 sm:pb-10 pt-4" style={{backgroundColor:"#1C0773"}}>
       <div className="core">
         <h1 className="title2">Meet the Team</h1>
         <h1 className="title">Core</h1>
+        
 
         {/* First Row */}
         <div className="team-row">
@@ -247,7 +248,50 @@ const Core = () => {
             <h1 className="role">JOINT TECHNICAL HEAD</h1>
             <h2 className="diya">Kartik Bankar</h2>
           </div>
+          
         </div>
+        <div className="particles">
+      <span style={{"--j":11}}></span>
+      <span style={{"--j":12}}></span>
+      <span style={{"--j":24}}></span>
+      <span style={{"--j":10}}></span>
+      <span style={{"--j":14}}></span>
+      <span style={{"--j":23}}></span>
+      <span style={{"--j":18}}></span>
+      <span style={{"--j":16}}></span>
+      <span style={{"--j":19}}></span>
+      <span style={{"--j":20}}></span>
+      <span style={{"--j":22}}></span>
+      <span style={{"--j":25}}></span>
+      <span style={{"--j":18}}></span>
+      <span style={{"--j":21}}></span>
+      <span style={{"--j":13}}></span>
+      <span style={{"--j":15}}></span>
+      <span style={{"--j":26}}></span>
+      <span style={{"--j":17}}></span>
+      <span style={{"--j":13}}></span>
+      <span style={{"--j":28}}></span>
+      <span style={{"--j":11}}></span>
+      <span style={{"--j":12}}></span>
+      <span style={{"--j":24}}></span>
+      <span style={{"--j":10}}></span>
+      <span style={{"--j":14}}></span>
+      <span style={{"--j":23}}></span>
+      <span style={{"--j":18}}></span>
+      <span style={{"--j":16}}></span>
+      <span style={{"--j":19}}></span>
+      <span style={{"--j":20}}></span>
+      <span style={{"--j":22}}></span>
+      <span style={{"--j":25}}></span>
+      <span style={{"--j":18}}></span>
+      <span style={{"--j":21}}></span>
+      <span style={{"--j":13}}></span>
+      <span style={{"--j":15}}></span>
+      <span style={{"--j":26}}></span>
+      <span style={{"--j":17}}></span>
+      <span style={{"--j":13}}></span>
+      <span style={{"--j":28}}></span>
+    </div>
       </div>
     </div>
   );
