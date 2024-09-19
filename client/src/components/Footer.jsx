@@ -24,17 +24,17 @@ const Footer = () => {
             </Hlink>
           </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>
+          <span id="abt" style={{ fontSize: "2.5rem" }}>
           <Hlink smooth to="/events/#eventtop" style={{fontWeight:"550"}}>
           Events
           </Hlink>
           </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>
+          <span id="abt" style={{ fontSize: "2.5rem" }}>
             <Hlink smooth to="/#gallery" style={{fontWeight:"550"}}>Gallery</Hlink>
             </span>
           <br />
-          <span style={{ fontSize: "2.5rem" }}>
+          <span id="abt" style={{ fontSize: "2.5rem" }}>
           <Hlink smooth to="/#contactus" style={{fontWeight:"550"}}>Contact Us</Hlink>
           </span>
           <br />

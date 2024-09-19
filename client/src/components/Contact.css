@@ -89,7 +89,12 @@ p {
 .form-field {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px; /* Adds space between the input rows */
+}
+
+.textarea-block{
+  flex-basis: 100%;
 }
 
 .field-item {
@@ -120,7 +125,8 @@ input {
 
 /* Styling for the Message textarea */
 textarea {
-  width: 80%; /* Full width for message box */
+  /* width: 80%;  */
+  /* Full width for message box */
   margin-bottom: 20px;
   height: 150px; /* Height remains */
   resize: none;
@@ -128,7 +134,8 @@ textarea {
 
 /* Wider textarea for the message box */
 textarea#message {
-  width: 35.7rem; /* Full width across the form */
+  /* width: 35.7rem;  */
+  /* Full width across the form */
   height: 100px; /* Slightly taller */
 }
 
@@ -197,6 +204,23 @@ button:hover {
     font-weight: bold;
     margin-bottom: 0px;
   }
+
+  textarea {
+    /* width: 80%;  */
+    /* Full width for message box */
+    margin-bottom: 20px;
+    height: 150px; /* Height remains */
+    resize: none;
+  }
+
+  .form-field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 20px; /* Adds space between the input rows */
+  }
+  
+
   .detail-item {
     display: flex;
     align-items: center;

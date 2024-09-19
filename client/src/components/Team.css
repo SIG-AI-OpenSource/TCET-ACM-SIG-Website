@@ -128,6 +128,78 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
+  /* border: 20px solid black; */
+}
+
+.member-border{
+  /* border: 2px solid black; */
+  border-radius:20px;
+  /* background-color: black; */
+  background-image:linear-gradient(-75deg,
+  transparent 0,
+  transparent 5%,
+  rgba(255, 255, 255, 0.5) 5%,
+  rgba(255,255,255,0.5) 10%,
+  transparent 10%,
+  transparent 100%);
+  background-size: 300% 100%;
+  /* -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text; */
+   transition: 1.2s; 
+  /* background-image: linear-gradient(black, rgb(76, 76, 157)); */
+}
+
+.container-memeber-border{
+  background: radial-gradient(circle, #015B97 0%, #1C0773 70%);
+  border-radius: 20px;
+  margin-top: 2rem;
+  /* transition: 1.2s; */
+}
+
+.container-memeber-border:hover{
+  background: radial-gradient(circle, rgb(211, 5, 91) 0%, #10014a 70%);
+  
+}
+
+.container4{
+  padding: 0 10px 5px;
+}
+
+.container5{
+  padding: 0 10px 5px;
+}
+
+.container6{
+  padding: 0 17px 5px;
+}
+
+.container7{
+  padding: 0 10px 5px;
+}
+
+.container8{
+  padding: 0 0px 5px;
+}
+
+.container9{
+  padding: 0 10px 10px;
+}
+
+.container10{
+  padding: 0 10px 10px;
+}
+
+.container12{
+  padding: 0 10px 5px;
+}
+
+.container13{
+  padding: 0 10px 5px;
+}
+
+.member-border:hover{
+  background-position: -120% 0;
+  color: white;
 }
 
 .role {
@@ -222,7 +294,17 @@
   /* z-index:; */
 }
 
-
+@keyframes particleanimate{
+  0%{
+    transform: translateY(100vh) scale(0) rotate(0deg);
+  }
+  20%{
+    transform: translateY(100vh) scale(1) rotate(0deg);
+  }
+  100%{
+    transform: translateY(-500vh) scale(0.5) rotate(360deg);
+  }
+}
 
 @media(max-width:640px){
   .particles{
@@ -276,14 +358,3 @@
   100px 0 #ff2d7599,
 }
 
-@keyframes particleanimate{
-  0%{
-    transform: translateY(100vh) scale(0) rotate(0deg);
-  }
-  20%{
-    transform: translateY(100vh) scale(1) rotate(0deg);
-  }
-  100%{
-    transform: translateY(-500vh) scale(0.5) rotate(360deg);
-  }
-}

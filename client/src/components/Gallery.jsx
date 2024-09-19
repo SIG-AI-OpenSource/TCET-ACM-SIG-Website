@@ -1,58 +1,16 @@
-import React, { useState } from "react";
-import "./home.css";
-import images from "./images.js";
-
-import CustomSlider from "./customslider.jsx";
-
-// // Import images directly
-// import img1 from "../components/asset/1-hover.jpg";
-// import img2 from "../components/asset/2-hover.avif";
-// import img3 from "../components/asset/3-hover.avif";
+import React from "react";
+import "./Gallery.css";
 
 const Gallery = () => {
-  // State to keep track of the current image index
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  // // Images array
-  // const images = [
-  //   { src: img1, alt: "Image 1" },
-  //   { src: img2, alt: "Image 2" },
-  //   { src: img3, alt: "Image 3" },
-  // ];
-
-  // // Handlers for image navigation
-  // const nextImage = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  // };
-
-  // const prevImage = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
-  //   );
-  // };
-
-  // // Handle hover event
-  // const handleHover = () => {
-  //   // Set interval to change image every 2 seconds
-  //   const interval = setInterval(() => {
-  //     nextImage();
-  //   }, 2000);
-
-  //   // Clear the interval when the user stops hovering
-  //   const stopHover = () => clearInterval(interval);
-  //   document.querySelector("div").addEventListener("mouseleave", stopHover);
-  // };
-
   return (
     <div
       style={{
         backgroundColor: "#C7E8FF",
-        height: "20%",
         width: "100%",
-        paddingBottom: "6%",
+        paddingBottom: "2%", // Reduced bottom padding to decrease gap
       }}
+
       id="gallery"
-      // onMouseEnter={handleHover} // Trigger image change on hover
     >
       <h1
         style={{
@@ -60,31 +18,154 @@ const Gallery = () => {
           textAlign: "center",
           color: "black",
           marginTop: "0",
-          fontFamily:"inter",
+          marginBottom: "2%",
+          fontWeight:'450', // Reduced margin bottom to decrease gap
         }}
       >
         Gallery
       </h1>
-      <CustomSlider>
-        {images.map((image, index) => {
-          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
-        })}
-      </CustomSlider>
-      {/* <div className="image-container" style={{ textAlign: "center" }}>
-        <img
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          className="image"
-          style={{
-            width: "800px",
-            height: "500px",
-            borderRadius: "5%",
-            marginBottom: "20px",
-          }}
-        />
-      </div> */}
+
+      {/* First Gallery (default direction) */}
+      <div
+        className="slider"
+        style={{
+          "--width": "300px", // Width of images
+          "--height": "250px", // Height of images
+          "--quantity": "9",
+          marginBottom: "0", // Remove margin between galleries
+        }}
+      >
+        <div className="list">
+          {/* Gallery items */}
+          <div className="item" style={{ "--position": 1 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 1"
+            />
+          </div>
+          <div className="item" style={{ "--position": 2 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 2"
+            />
+          </div>
+          <div className="item" style={{ "--position": 3 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 3"
+            />
+          </div>
+          <div className="item" style={{ "--position": 4 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 4"
+            />
+          </div>
+          <div className="item" style={{ "--position": 5 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 5"
+            />
+          </div>
+          <div className="item" style={{ "--position": 6 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 6"
+            />
+          </div>
+          <div className="item" style={{ "--position": 7 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 7"
+            />
+          </div>
+          <div className="item" style={{ "--position": 8 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 8"
+            />
+          </div>
+          <div className="item" style={{ "--position": 9 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 9"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Second Gallery (reverse direction) */}
+      <div
+        className="slider"
+        reverse="true" /* This will reverse the animation direction */
+        style={{
+          "--width": "300px", // Width of images
+          "--height": "300px", // Height of images
+          "--quantity": "9",
+          marginTop: "0", // Remove margin between galleries
+        }}
+      >
+        <div className="list">
+          {/* Gallery items */}
+          <div className="item" style={{ "--position": 1 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 1"
+            />
+          </div>
+          <div className="item" style={{ "--position": 2 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 2"
+            />
+          </div>
+          <div className="item" style={{ "--position": 3 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 3"
+            />
+          </div>
+          <div className="item" style={{ "--position": 4 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 4"
+            />
+          </div>
+          <div className="item" style={{ "--position": 5 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 5"
+            />
+          </div>
+          <div className="item" style={{ "--position": 6 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 6"
+            />
+          </div>
+          <div className="item" style={{ "--position": 7 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 7"
+            />
+          </div>
+          <div className="item" style={{ "--position": 8 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 8"
+            />
+          </div>
+          <div className="item" style={{ "--position": 9 }}>
+            <img
+              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              alt="Gallery Image 9"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Gallery;
+

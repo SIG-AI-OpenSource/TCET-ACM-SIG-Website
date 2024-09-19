@@ -152,6 +152,7 @@
   width: 77.1%;
   height: 350px;
   background-size: contain;
+  background-repeat: round;
 }
 
 .magazinetitle{
@@ -244,7 +245,7 @@
     width: 80%;
     height: 18rem;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: round;
     align-self: center;
 
   }
@@ -464,7 +465,10 @@ footer{
 
 .map{
   width:60%;
-  box-shadow:0 0 20px #015B97;
+  border: 5px solid black;
+  border-radius: 10px; 
+  box-shadow:20px 20px 4px #015B97;
+  height: 350px;
 }
 
 @media(max-width:640px){
@@ -484,7 +488,8 @@ footer{
   .map{
     width:70%;
     height: 450px;
-    box-shadow:0 0 20px #015B97;
+    box-shadow:0 0px 40px #015B97,
+    ;
   }
 }
 
@@ -640,3 +645,129 @@ footer{
   border-radius: 50px;
   transition: .5s ease-in-out;
 } */
+
+@media(max-width:640px){
+  nav{
+    background-color: transparent;
+  }
+}
+
+nav{
+  /* background-color: white; */
+  position: relative;
+}
+
+.hearderrelfection{
+  /* background-color: #001F4B; */
+  backdrop-filter: blur(8px) brightness(55%);
+}
+
+.hearderrelfection::before{
+  content:'';
+  position:absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.7s;
+}
+
+.hearderrelfection:hover::before{
+  left: 100%;
+}
+
+.navlinks{
+  /* background-color: #232270; */
+  /* color: #232270; */
+  position: relative;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 2px;
+  padding-left: 9px;
+  padding-right: 9px;
+  /* border: 2px solid #232270; */
+  font-weight: 700;
+  background-image:linear-gradient(-75deg,
+  transparent 0,
+  transparent 5%,
+  rgba(255,255,255,0.5) 5%,
+  rgba(255,255,255,0.5) 10%,
+  transparent 10%,
+  transparent 100%);
+  background-size: 200% 100%;
+  /* -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text; */
+  transition: 1.2s;
+}
+
+.navlinks:hover{
+  background-position: -120% 0;
+  color: white;
+  text-shadow: 0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #fff,
+  0 0 80px #fff,
+  0 0 120px #fff,
+  0 0 160px #fff;
+}
+
+@keyframes glowing{
+  0%{background-position: 0 0;}
+  50%{background-position: 400% 0;}
+  100%{background-position: 0 0;}
+}
+
+.navlinks::before{
+  content:'a';
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 1rem;
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: #fff;
+  text-decoration-line: underline;
+  animation: animate 1s linear ;
+}
+
+.navlinks::after{
+  content:'a';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 1rem;
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: #fff;
+  text-decoration-line: underline;
+  animation: animateafter 1s linear;
+  display: none;
+}
+
+.navlinks:hover::before{
+  display: block;
+}
+
+.navlinks:hover::after{
+  display: block;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translateX(-70rem);
+  }
+}
+
+@keyframes animateafter{
+  0%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translateX(70rem);
+  }
+}

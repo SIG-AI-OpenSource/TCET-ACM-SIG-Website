@@ -66,8 +66,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 w-screen bg-black backdrop-blur-md bg-opacity-5 text-white p-2 flex justify-between items-center z-50"
-      style={{ backdropFilter: "blur(8px) brightness(55%)" }}
+      className="fixed top-0 left-0 w-screen bg-black backdrop-blur-md bg-opacity-5 text-white p-2 flex justify-between items-center z-50 hearderrelfection"
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : "-100%" }}
       transition={{ duration: 0.3 }}
@@ -138,24 +137,24 @@ const Header = () => {
         {click && content}
       </div>
         
-      <button onClick={handleClick} className="sm:hidden">
+      <button onClick={handleClick} className="sm:hidden mr-2">
         {click ? <FaTimes/>:<CiMenuFries/>}
       </button>
 
-      <nav className="space-x-10 font-bold flex-grow flex justify-center text-base hidden sm:flex" >
-        <Hlink to="/" smooth className="hover:underline navlinks">
+      <nav className="space-x-4 font-bold flex-grow justify-center text-base hidden sm:flex group" >
+        <Hlink to="/" smooth className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           Home
         </Hlink>
-        <Hlink smooth to="/events/#eventtop" className="hover:underline navlinks">
+        <Hlink smooth to="/events/#eventtop" className=" navlinks cursor-pointer duration-0 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           Events
         </Hlink>
-        <Hlink to="/team/#meetteam" className="hover:underline navlinks">
+        <Hlink to="/team/#meetteam" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           Meet the Team
         </Hlink>
-        <Hlink to="/#publication" className="hover:underline navlinks" smooth>
+        <Hlink to="/#publication" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" smooth>
           Publications
         </Hlink>
-        <Hlink to="/#contactus" className="hover:underline navlinks" smooth>
+        <Hlink to="/#contactus" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" smooth>
           Contact us
         </Hlink>
         {/* <hr /> */}

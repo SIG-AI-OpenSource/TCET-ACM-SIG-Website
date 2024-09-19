@@ -20,7 +20,7 @@ const Team = () => {
   return (
     <>
       {/* Hero Image and Text */}
-      <div className="relative z-0">
+      <div className="relative z-0" id="meetteam">
         <img
           src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1725605100/WhatsApp_Image_2024-09-05_at_07.50.06_ugokm4.jpg"
           alt="Descriptive Alt Text"
