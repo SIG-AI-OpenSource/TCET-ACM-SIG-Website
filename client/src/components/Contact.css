@@ -137,6 +137,7 @@ textarea#message {
   /* width: 35.7rem;  */
   /* Full width across the form */
   height: 100px; /* Slightly taller */
+  /* flex-grow: 1; */
 }
 
 /* Button styling */
