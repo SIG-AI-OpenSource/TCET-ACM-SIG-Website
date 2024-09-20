@@ -30,19 +30,20 @@ const Faculty = () => {
   });
 
   return (
-    <div className="bg-black">
+    <div className="bg-black" style={{backgroundColor:"#015B97"}}>
       <div className="pt-10">
         <motion.h1
-          className="text-violet-700 text-sm pl-60 pb-3 font-inter"
+          className="text-700 text-lg pl-10 sm:pl-60 pb-3 font-inter"
           ref={headerRef}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 50 }}
           transition={{ duration: 0.5 }}
+          style={{color:"#A076F9"}}
         >
           PEOPLE
         </motion.h1>
         <motion.h1
-          className="pb-14 font-inter text-5xl text-white pl-60"
+          className=" pb-6 sm:pb-14 font-inter text-3xl sm:text-5xl text-white pl-10 sm:pl-60"
           ref={headerRef}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 50 }}
@@ -53,7 +54,7 @@ const Faculty = () => {
       </div>
 
       {/* Faculty card 1 */}
-      <div className="bg-black text-white max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg py-5">
+      <div className="text-white max-w-5xl mx-auto rounded-lg overflow-hidden py-5 pl-10 sm:pl-[0%]">
         <div className="flex flex-col md:flex-row">
           <motion.div
             className="w-full md:w-1/3 h-64 md:h-auto relative pr-10"
@@ -68,11 +69,11 @@ const Faculty = () => {
             <img
               src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726138307/WhatsApp_Image_2024-09-06_at_19.32.08_guwfma.jpg"
               alt="Profile picture"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full rounded-2xl"
             />
           </motion.div>
           <motion.div
-            className="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-between"
+            className="w-full md:w-2/3 pl-0 p-6 sm:p-6 md:p-8 flex flex-col justify-between"
             ref={textRef1}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: textInView1 ? 0 : 100, opacity: textInView1 ? 1 : 0 }}
@@ -115,10 +116,10 @@ const Faculty = () => {
       </div>
 
       {/* Faculty card 2 */}
-      <div className="bg-black text-white max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg py-5 pb-5">
+      <div className="text-white max-w-5xl mx-auto rounded-lg overflow-hidden  py-5 pb-8 pl-10 sm:pl-[0%]">
         <div className="flex flex-col md:flex-row">
           <motion.div
-            className="w-full md:w-1/3 h-64 md:h-auto relative pr-10"
+            className="w-full md:w-1/3 h-64 md:h-auto relative pr-10 "
             ref={imageRef2}
             initial={{ x: -100, opacity: 0 }}
             animate={{
@@ -130,11 +131,11 @@ const Faculty = () => {
             <img
               src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726141654/WhatsApp_Image_2024-09-06_at_19.32.08_1_jqct9d.jpg"
               alt="Profile picture"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full rounded-2xl"
             />
           </motion.div>
           <motion.div
-            className="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-between"
+            className="w-full md:w-2/3 pl-0 p-6 sm:p-6 md:p-8 flex flex-col justify-between"
             ref={textRef2}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: textInView2 ? 0 : 100, opacity: textInView2 ? 1 : 0 }}
