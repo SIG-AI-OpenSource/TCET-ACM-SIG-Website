@@ -14,7 +14,7 @@ const fadeUpVariants = {
 
 const EventsComponent = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="eventtop">
       {/* Hero Image and Text */}
       <div className="relative z-0">
         <img
@@ -23,7 +23,7 @@ const EventsComponent = () => {
           className="w-full h-screen object-cover"
         />
         <motion.div
-          className="absolute top-[390px] left-[64px] w-[1390px] h-[250px] bg-black/5 backdrop-blur-md rounded-[40px] flex justify-left flex-col items-start pt-10"
+          className="absolute top-[390px] left-[64px] w-[90%] h-[250px] bg-black/5 backdrop-blur-md rounded-[40px] flex justify-left flex-col items-start pt-10"
           initial="hidden"
           animate="visible"
           variants={fadeDownVariants}
@@ -46,7 +46,7 @@ const EventsComponent = () => {
         </motion.div>
       </div>
 
-      <div className="relative z-10 bg-black min-h-screen">
+      <div className="relative z-10 bg-blue-800 min-h-screen">
         <Eventpost />
       </div>
     </div>
