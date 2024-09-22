@@ -1,9 +1,15 @@
-import React from "react";
+import React,{ useRef } from "react";
 import "./home.css";
+import { motion, transform, useScroll, useTransform } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Publications = () => {
+  const { ref: headerRef, inView: headerInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
   return (
-    <div className="publications" id="publication">
+    <div className="publications" id="publication" ref={headerRef}>
       <div className="titleyear w-screen">
         <div  className="publicationstitle">
           Publications
@@ -59,33 +65,41 @@ const Publications = () => {
           </p>
         </div>
       </div>
-      <div style={{ display: "flex", gap: "30%", marginTop: "9%" }}>
-        <div
-          style={{
-            color: "rgb(119,0,234)",
-            display: "flex",
-            gap: "1.5rem",
-            marginLeft: "4%",
-            fontSize: "1.2rem",
-          }}
+      <div
+      className="info-rotate-right-text"
+      ref={headerRef}
+      >
+        <motion.div className="center-rotate-text"  
         >
-          <div>INNOVATE</div>
-          <div>CREATE</div>
-          <div>INSPIRE</div>
-        </div>
-        <div style={{ color: "white", width: "45%", fontSize: "2rem" }}>
-          <span id="abt">Association for Computing Machinery</span>'s{" "}
-          <span id="abt">Special Interest Group</span> on{" "}
-          <span id="abt">Artificial Intelligence</span>
+          <motion.div className="rotate-text-block" 
+          ref={headerRef}
+        initial={{ opacity: 0, x: 10 }}
+        animate={{ opacity: headerInView ? 1 : 0, x: headerInView ? 0 : -150 }}
+        transition={{ duration: 0.5 }}>
+          <span className="rotate-text">INNOVATE</span>
+          <span className="rotate-text">CREATE</span>
+          <span className="rotate-text">INSPIRE</span>
+          <span className="rotate-text">TRANSFORM</span>
+          <span className="rotate-text">COLLABORATE</span>
+          </motion.div>
+        </motion.div>
+        <motion.div
+         initial={{ opacity: 0, x: 10 }}
+         animate={{ opacity: headerInView ? 1 : 0, x: headerInView ? 0 : 150 }}
+         transition={{ duration: 0.5 }}
+         className="right-text-info">
+          <span id="abts">Association for Computing Machinery</span>'s{" "}
+          <span id="abts">Special Interest Group</span> on{" "}
+          <span id="abts">Artificial Intelligence</span>
           <br />
           <br />
           An interdisciplinary group of academic and industrial researchers,
           practitioners,
-          <span id="abt">software developers</span>,
-          <span id="abt">end users</span>, and students who work together to
+          <span id="abts">software developers</span>,
+          <span id="abts">end users</span>, and students who work together to
           promote and support the growth and application of AI principles and
           techniques throughout computing.
-        </div>
+        </motion.div>
       </div>
     </div>
   );

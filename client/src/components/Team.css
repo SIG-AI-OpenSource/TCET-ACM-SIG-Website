@@ -89,6 +89,21 @@
   color: white;
 }
 
+.core-info{
+  /* transition-duration: 2s; */
+  text-align:start;
+}
+
+.core-info2{
+  font-size:0.9rem;
+}
+
+.linked-in{
+  color: white;
+  transition: 0.4s;
+  /* background-color: white; */
+}
+
 @media (max-width: 768px) {
   .Jteam-row {
     flex-direction: column;
