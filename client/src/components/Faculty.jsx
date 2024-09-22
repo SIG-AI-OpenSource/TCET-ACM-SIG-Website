@@ -30,7 +30,7 @@ const Faculty = () => {
   });
 
   return (
-    <div className="bg-black" style={{backgroundColor:"#015B97"}}>
+    <div className="bg-black" style={{ backgroundColor: "#015B97" }}>
       <div className="pt-10">
         <motion.h1
           className="text-700 text-lg pl-10 sm:pl-60 pb-3 font-inter"
@@ -38,7 +38,7 @@ const Faculty = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 50 }}
           transition={{ duration: 0.5 }}
-          style={{color:"#A076F9"}}
+          style={{ color: "#A076F9" }}
         >
           PEOPLE
         </motion.h1>
@@ -105,7 +105,7 @@ const Faculty = () => {
               </a>
               <a
                 href="https://www.linkedin.com/in/dr-shiwani-gupta-9b731a53/?originalSubdomain=in"
-                target="blank"
+                target="_blank"
                 className="text-gray-400 hover:text-white"
               >
                 <Linkedin size={16} />
@@ -129,7 +129,7 @@ const Faculty = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <img
-              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726141654/WhatsApp_Image_2024-09-06_at_19.32.08_1_jqct9d.jpg"
+              src="https://shorturl.at/05KIo"
               alt="Profile picture"
               className="object-cover w-full h-full rounded-2xl"
             />
@@ -143,7 +143,7 @@ const Faculty = () => {
           >
             <div>
               <h2 className="text-xl md:text-2xl font-bold mb-1">
-                Shilpa Mathur
+                Pranjali Sankhe
               </h2>
               <p className="text-sm text-gray-400 mb-4">Faculty Incharge</p>
               <p className="text-xl mb-6">
@@ -160,7 +160,11 @@ const Faculty = () => {
               <a href="#" className="text-gray-400 hover:text-white">
                 <Instagram size={16} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://www.linkedin.com/in/pranjali-sankhe-5421aa160/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                className="text-gray-400 hover:text-white"
+              >
                 <Linkedin size={16} />
               </a>
             </div>
