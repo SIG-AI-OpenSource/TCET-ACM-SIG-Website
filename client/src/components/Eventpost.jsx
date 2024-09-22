@@ -25,12 +25,12 @@ const Eventpost = () => {
       </h1>
 
       {/* cards section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-6 space-y-5">
         {events &&
           events.map((event) => (
             <Link to={`/events/${event._id}#top`} key={event._id}>
               <motion.div
-                className="text-white shadow-md rounded-2xl overflow-hidden relative group"
+                className="text-white  rounded-2xl overflow-hidden relative group shadow-2x"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
