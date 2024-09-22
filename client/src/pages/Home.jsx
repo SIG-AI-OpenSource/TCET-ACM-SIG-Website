@@ -1,66 +1,70 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import About from "../components/About";
 import Publications from "../components/Publications";
-
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
+import Map from "../components/map";
+import "./home.css"
+import {motion, useInView, useAnimation} from "framer-motion";
+
 <link
   href="https://fonts.googleapis.com/css2?family=Clash+Grotesk:wght@400;500;600&display=swap"
   rel="stylesheet"
 ></link>;
 
 const Home = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref,{once:true});
+  const mainControls = useAnimation();
+
+  useEffect(()=>{
+    console.log(isInView);
+    if(isInView){
+      mainControls.start("visible");
+    }
+  },[isInView]);
+
   return (
-    <>
-      <div className="">
+    <div ref={ref}>
+      <div id="home">
         <img
           src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726159046/download_4_tvrrce.png"
           alt="Descriptive Alt Text"
-          className="w-full h-[100vh] object-cover"
+          className="w-screen h-[100vh] object-cover sm:object-cover"
         />
 
         {/* Container for the text and button */}
-        <div
-          className="absolute top-0 left-0 w-full h-full flex flex-col items-start justify-center"
-          style={{ marginLeft: "40px", paddingTop: "10%" }}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full flex flex-col items-start justify-center herotextandbutton"
+          
+          variants={{
+            hidden:{opacity:0 , y: 75},
+            visible:{opacity:1,y:0}}}
+          initial="hidden"
+          animate="visible"
+          transition={{duration:0.5,delay:0.25}}
         >
           {/* Welcome Text */}
           <h1
-            style={{
-              fontSize: "6rem",
-              color: "#000000",
-              fontFamily: "'Clash Grotesk', sans-serif",
-              fontWeight: "400",
-            }}
+            className="homeheroh1"
           >
             Welcome to
           </h1>
 
           {/* TCET ACM-SIGAI Text */}
           <h2
-            style={{
-              fontSize: "3rem",
-              color: "#000000",
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: "500",
-              marginTop: "2px",
-              marginLeft: "5px",
-            }}
+          
+            className="homeheroh2"
           >
-            TCET ACM-SIGAI
+            TCET ACM<br className="sm:hidden"/>SIGAI
           </h2>
 
           {/* Student's Chapter Text */}
           <p
-            style={{
-              fontSize: "2rem",
-              color: "#000000",
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: "400",
-              marginTop: "0px",
-              marginLeft: "8px",
-            }}
+          
+            className="homeherop"
           >
             Student's Chapter
           </p>
@@ -68,19 +72,25 @@ const Home = () => {
           {/* Learn More Button */}
           <a
             href="#"
-            className="mt-5 bg-purple-600 text-white py-3 px-6 rounded-full text-lg font-medium hover:bg-purple-800 transition"
+            className="mt-5 bg-purple-600 text-white py-3 px-6 rounded-full text-lg font-medium hover:bg-purple-800 transition homeheroatag"
           >
             Learn more →
           </a>
-        </div>
+        </motion.div>
       </div>
-
-      <About />
+      <motion.div variants={{
+        hidden:{opacity:0 , y: 75},
+        visible:{opacity:1,y:0}}}
+        initial="hidden"
+        animate={mainControls}
+        transition={{duration:0.5,delay:0.25}}>
+      <About/>
+      </motion.div>
       <Publications />
-
       <Gallery />
       <Contact />
-    </>
+      <Map/>
+    </div>
   );
 };
 

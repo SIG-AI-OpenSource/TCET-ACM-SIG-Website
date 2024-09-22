@@ -3,76 +3,52 @@ import "./home.css";
 
 const Publications = () => {
   return (
-    <div className="publications">
-      <div style={{ display: "flex" }}>
-        <div style={{ color: "white", fontSize: "4rem", paddingLeft: "2rem" }}>
-          Publications
-        </div>
-        <div
-          style={{
-            color: "rgb(119,0,234)",
-            marginLeft: "60%",
-            marginTop: "2%",
-            fontSize: "1.5rem",
-          }}
-        >
-          2023-24
-        </div>
+    <div className="publications" id="publication">
+      <div className="titleyear w-screen">
+        <div className="publicationstitle">Publications</div>
+        <div className="publicationyear">2023-24</div>
       </div>
-      <div style={{ display: "flex", margin: "5%", marginRight: "8%" }}>
-        <div className="mag_1">
-          <div className="pic_one"></div>
-          <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+      <div className="magazineblock group">
+        <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+          <a
+            href="https://online.pubhtml5.com/hiwar/abef/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Tejas Vol 1
-          </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.2rem",
-              marginTop: "6%",
-            }}
-          >
-            We start by gaining a deep understanding of your business goals.
-          </div>
+            <div className="pic_one"></div>
+            <div className="magazinetitle">Tejas Vol 1</div>
+            <p className="magazinepara">
+              We start by gaining a deep <br />
+              understanding of your <br /> business goals.
+            </p>
+          </a>
         </div>
-        <div className="mag_2">
-          <div className="pic_two"></div>
-          <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+        <div className="mag_2 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+          <a
+            href="https://pubhtml5.com/hiwar/uqpn/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Tejas Vol 2
-          </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.2rem",
-              marginTop: "6%",
-            }}
-          >
-            Next, our team of experts develops tailored solutions.
-          </div>
+            <div className="pic_two"></div>
+            <div className="magazinetitle">Tejas Vol 2</div>
+            <p className="magazinepara">
+              Next, our team of experts <br /> develops tailored solutions.
+            </p>
+          </a>
         </div>
-        <div className="mag_3">
-          <div className="pic_three"></div>
-          <div
-            style={{ color: "white", textAlign: "center", fontSize: "2.5rem" }}
+        <div className="mag_3 duration-500 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+          <a
+            href="https://pubhtml5.com/hiwar/vfrp/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Tejas Vol 3.1
-          </div>
-          <div
-            style={{
-              color: "white",
-              textAlign: "center",
-              fontSize: "1.3rem",
-              marginTop: "6%",
-            }}
-          >
-            We leverage cutting-edge technology to implement seamlessly.
-          </div>
+            <div className="pic_three"></div>
+            <div className="magazinetitle">Tejas Vol 3.1</div>
+            <p className="magazinepara">
+              We leverage cutting-edge <br /> technology to implement <br />{" "}
+              seamlessly.
+            </p>
+          </a>
         </div>
       </div>
       <div style={{ display: "flex", gap: "30%", marginTop: "9%" }}>
