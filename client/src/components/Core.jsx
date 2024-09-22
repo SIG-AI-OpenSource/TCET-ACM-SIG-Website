@@ -1,14 +1,13 @@
 import React from "react";
 import "./Team.css"; // Make sure you have your CSS in place
-import {FaLinkedin} from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Core = () => {
   return (
-    <div className="pb-0 sm:pb-10 pt-4" style={{backgroundColor:"#1C0773"}}>
+    <div className="pb-0 sm:pb-10 pt-4" style={{ backgroundColor: "#1C0773" }}>
       <div className="core">
         <h1 className="title2">Meet the Team</h1>
         <h1 className="title">Core</h1>
-        
 
         {/* First Row */}
         <div className="team-row group">
@@ -30,7 +29,7 @@ const Core = () => {
             </a>
             <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Chairperson, Diya Manapetty! Diya’s beauty is matched by her inner grace, with kindness that deeply enriches every aspect of her work. Her dedication, resilience, and unwavering commitment not only drive our team forward but also creates a harmonious and motivated environment. Diya’s adept management and inspiring leadership ensure we achieve our best. We are thrilled to have such a visionary and compassionate leader guiding us. Here’s to an extraordinary journey with you, Diya!
             </div>
-           
+          
           </div>
 
           <div className="container4 relative container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
@@ -126,7 +125,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">SPONSORSHIP<br />HEAD</h1>
+            <h1 className="role">
+              SPONSORSHIP
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Rahul George</h2>
             <a href="https://www.linkedin.com/in/r4hvl/" className="absolute top-0 right-full sm:right-0 text-4xl hidden group-hover/linkedin:inline linked-in z-50" > 
             <FaLinkedin />
@@ -149,7 +152,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">PUBLIC RELATIONS<br />HEAD</h1>
+            <h1 className="role">
+              PUBLIC RELATIONS
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Saurabh Shukla</h2>
             <a href="https://www.linkedin.com/in/saurabh-shukla-3507991bb/" className="absolute top-0 right-full sm:left-0 text-4xl hidden group-hover/linkedin:inline linked-in z-50" > 
             <FaLinkedin />
@@ -265,7 +272,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT EVENT<br />MANAGER</h1>
+            <h1 className="role">
+              JOINT EVENT
+              <br />
+              MANAGER
+            </h1>
             <h2 className="diya">Taran Shetty</h2>
           </div>
 
@@ -294,7 +305,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT CREATIVE<br />HEAD</h1>
+            <h1 className="role">
+              JOINT CREATIVE
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Rishikesh Saroj</h2>
           </div>
 
@@ -320,53 +335,56 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT TECHNICAL<br />HEAD</h1>
+            <h1 className="role">
+              JOINT TECHNICAL
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Kartik Bankar</h2>
           </div>
-          
         </div>
         <div className="particles">
-      <span style={{"--j":11}}></span>
-      <span style={{"--j":12}}></span>
-      <span style={{"--j":24}}></span>
-      <span style={{"--j":10}}></span>
-      <span style={{"--j":14}}></span>
-      <span style={{"--j":23}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":16}}></span>
-      <span style={{"--j":19}}></span>
-      <span style={{"--j":20}}></span>
-      <span style={{"--j":22}}></span>
-      <span style={{"--j":25}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":21}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":15}}></span>
-      <span style={{"--j":26}}></span>
-      <span style={{"--j":17}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":28}}></span>
-      <span style={{"--j":11}}></span>
-      <span style={{"--j":12}}></span>
-      <span style={{"--j":24}}></span>
-      <span style={{"--j":10}}></span>
-      <span style={{"--j":14}}></span>
-      <span style={{"--j":23}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":16}}></span>
-      <span style={{"--j":19}}></span>
-      <span style={{"--j":20}}></span>
-      <span style={{"--j":22}}></span>
-      <span style={{"--j":25}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":21}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":15}}></span>
-      <span style={{"--j":26}}></span>
-      <span style={{"--j":17}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":28}}></span>
-    </div>
+          <span style={{ "--j": 11 }}></span>
+          <span style={{ "--j": 12 }}></span>
+          <span style={{ "--j": 24 }}></span>
+          <span style={{ "--j": 10 }}></span>
+          <span style={{ "--j": 14 }}></span>
+          <span style={{ "--j": 23 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 16 }}></span>
+          <span style={{ "--j": 19 }}></span>
+          <span style={{ "--j": 20 }}></span>
+          <span style={{ "--j": 22 }}></span>
+          <span style={{ "--j": 25 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 21 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 15 }}></span>
+          <span style={{ "--j": 26 }}></span>
+          <span style={{ "--j": 17 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 28 }}></span>
+          <span style={{ "--j": 11 }}></span>
+          <span style={{ "--j": 12 }}></span>
+          <span style={{ "--j": 24 }}></span>
+          <span style={{ "--j": 10 }}></span>
+          <span style={{ "--j": 14 }}></span>
+          <span style={{ "--j": 23 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 16 }}></span>
+          <span style={{ "--j": 19 }}></span>
+          <span style={{ "--j": 20 }}></span>
+          <span style={{ "--j": 22 }}></span>
+          <span style={{ "--j": 25 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 21 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 15 }}></span>
+          <span style={{ "--j": 26 }}></span>
+          <span style={{ "--j": 17 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 28 }}></span>
+        </div>
       </div>
     </div>
   );
