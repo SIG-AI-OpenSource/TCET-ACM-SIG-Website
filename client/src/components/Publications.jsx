@@ -20,6 +20,7 @@ const Publications = () => {
             href="https://online.pubhtml5.com/hiwar/abef/"
             target="_blank"
             rel="noopener noreferrer"
+            className="center-magazine-content"
           >
             <div className="pic_one"></div>
             <div className="magazinetitle">Tejas Vol 1</div>
@@ -34,6 +35,7 @@ const Publications = () => {
             href="https://pubhtml5.com/hiwar/uqpn/"
             target="_blank"
             rel="noopener noreferrer"
+            className="center-magazine-content"
           >
             <div className="pic_two"></div>
             <div className="magazinetitle">Tejas Vol 2</div>
@@ -47,6 +49,7 @@ const Publications = () => {
             href="https://pubhtml5.com/hiwar/vfrp/"
             target="_blank"
             rel="noopener noreferrer"
+            className="center-magazine-content"
           >
             <div className="pic_three"></div>
             <div className="magazinetitle">Tejas Vol 3.1</div>
