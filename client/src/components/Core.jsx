@@ -1,14 +1,13 @@
 import React from "react";
 import "./Team.css"; // Make sure you have your CSS in place
-import {FaLinkedin} from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Core = () => {
   return (
-    <div className="pb-0 sm:pb-10 pt-4" style={{backgroundColor:"#1C0773"}}>
+    <div className="pb-0 sm:pb-10 pt-4" style={{ backgroundColor: "#1C0773" }}>
       <div className="core">
         <h1 className="title2">Meet the Team</h1>
         <h1 className="title">Core</h1>
-        
 
         {/* First Row */}
         <div className="team-row group">
@@ -20,13 +19,15 @@ const Core = () => {
                 width="240px"
                 height="250px"
               />
-              <a href="" className="absolute top-0 left-0 text-4xl hidden group-hover/linkedin:inline" > 
+              <a
+                href=""
+                className="absolute top-0 left-0 text-4xl hidden group-hover/linkedin:inline"
+              >
                 <FaLinkedin />
               </a>
             </div>
             <h1 className="role">CHAIRPERSON</h1>
             <h2 className="diya">Diya Binoy</h2>
-           
           </div>
 
           <div className="container4 relative container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 hover:right-8 z-40">
@@ -37,10 +38,18 @@ const Core = () => {
                 width="215px"
                 height="250px"
               />
-               <a href="" className="absolute top-0 left-0 text-4xl hidden group-hover/linkedin:inline " > 
+              <a
+                href=""
+                className="absolute top-0 left-0 text-4xl hidden group-hover/linkedin:inline "
+              >
                 <FaLinkedin />
               </a>
-              <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block group-hover/linkedin:translate-x-[80%] bg-white text-black rounded-lg group-hover/linkedin:-z-10 group-hover/linkedin:duration-1000 duration-1000 transition-transform">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quae dicta consequuntur assumenda, aspernatur in culpa fugiat sint asperiores cum perferendis pariatur id maxime iste reprehenderit et, suscipit ex distinctio.</div>
+              <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block group-hover/linkedin:translate-x-[80%] bg-white text-black rounded-lg group-hover/linkedin:-z-10 group-hover/linkedin:duration-1000 duration-1000 transition-transform">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+                quae dicta consequuntur assumenda, aspernatur in culpa fugiat
+                sint asperiores cum perferendis pariatur id maxime iste
+                reprehenderit et, suscipit ex distinctio.
+              </div>
             </div>
             <h1 className="role z-10">VICE-CHAIRPERSON</h1>
             <h2 className="diya">Satish Gupta</h2>
@@ -97,7 +106,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">SPONSORSHIP<br />HEAD</h1>
+            <h1 className="role">
+              SPONSORSHIP
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Rahul George</h2>
           </div>
         </div>
@@ -113,7 +126,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">PUBLIC RELATIONS<br />HEAD</h1>
+            <h1 className="role">
+              PUBLIC RELATIONS
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Saurabh Shukla</h2>
           </div>
 
@@ -199,7 +216,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT EVENT<br />MANAGER</h1>
+            <h1 className="role">
+              JOINT EVENT
+              <br />
+              MANAGER
+            </h1>
             <h2 className="diya">Taran Shetty</h2>
           </div>
 
@@ -228,7 +249,11 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT CREATIVE<br />HEAD</h1>
+            <h1 className="role">
+              JOINT CREATIVE
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Rishikesh Saroj</h2>
           </div>
 
@@ -254,53 +279,56 @@ const Core = () => {
                 height="250px"
               />
             </div>
-            <h1 className="role">JOINT TECHNICAL<br />HEAD</h1>
+            <h1 className="role">
+              JOINT TECHNICAL
+              <br />
+              HEAD
+            </h1>
             <h2 className="diya">Kartik Bankar</h2>
           </div>
-          
         </div>
         <div className="particles">
-      <span style={{"--j":11}}></span>
-      <span style={{"--j":12}}></span>
-      <span style={{"--j":24}}></span>
-      <span style={{"--j":10}}></span>
-      <span style={{"--j":14}}></span>
-      <span style={{"--j":23}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":16}}></span>
-      <span style={{"--j":19}}></span>
-      <span style={{"--j":20}}></span>
-      <span style={{"--j":22}}></span>
-      <span style={{"--j":25}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":21}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":15}}></span>
-      <span style={{"--j":26}}></span>
-      <span style={{"--j":17}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":28}}></span>
-      <span style={{"--j":11}}></span>
-      <span style={{"--j":12}}></span>
-      <span style={{"--j":24}}></span>
-      <span style={{"--j":10}}></span>
-      <span style={{"--j":14}}></span>
-      <span style={{"--j":23}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":16}}></span>
-      <span style={{"--j":19}}></span>
-      <span style={{"--j":20}}></span>
-      <span style={{"--j":22}}></span>
-      <span style={{"--j":25}}></span>
-      <span style={{"--j":18}}></span>
-      <span style={{"--j":21}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":15}}></span>
-      <span style={{"--j":26}}></span>
-      <span style={{"--j":17}}></span>
-      <span style={{"--j":13}}></span>
-      <span style={{"--j":28}}></span>
-    </div>
+          <span style={{ "--j": 11 }}></span>
+          <span style={{ "--j": 12 }}></span>
+          <span style={{ "--j": 24 }}></span>
+          <span style={{ "--j": 10 }}></span>
+          <span style={{ "--j": 14 }}></span>
+          <span style={{ "--j": 23 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 16 }}></span>
+          <span style={{ "--j": 19 }}></span>
+          <span style={{ "--j": 20 }}></span>
+          <span style={{ "--j": 22 }}></span>
+          <span style={{ "--j": 25 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 21 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 15 }}></span>
+          <span style={{ "--j": 26 }}></span>
+          <span style={{ "--j": 17 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 28 }}></span>
+          <span style={{ "--j": 11 }}></span>
+          <span style={{ "--j": 12 }}></span>
+          <span style={{ "--j": 24 }}></span>
+          <span style={{ "--j": 10 }}></span>
+          <span style={{ "--j": 14 }}></span>
+          <span style={{ "--j": 23 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 16 }}></span>
+          <span style={{ "--j": 19 }}></span>
+          <span style={{ "--j": 20 }}></span>
+          <span style={{ "--j": 22 }}></span>
+          <span style={{ "--j": 25 }}></span>
+          <span style={{ "--j": 18 }}></span>
+          <span style={{ "--j": 21 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 15 }}></span>
+          <span style={{ "--j": 26 }}></span>
+          <span style={{ "--j": 17 }}></span>
+          <span style={{ "--j": 13 }}></span>
+          <span style={{ "--j": 28 }}></span>
+        </div>
       </div>
     </div>
   );
