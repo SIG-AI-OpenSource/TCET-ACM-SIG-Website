@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../services/useFetch";
 
+
 const Eventdetail = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch(
@@ -23,7 +24,7 @@ const Eventdetail = () => {
       <div className="flex justify-between bg-white">
         <div className="text-center">
           <h1 className="text-5xl text-gray-800 font-bold  pt-24">{title}</h1>
-          <p className="text-xl font-semibold  text-gray-500 mb-8 pt-20 text-justify px-40 ">
+          <p className="text-xl font-semibold  text-gray-500 mb-8 pt-20 text-justify  px-40 ">
             {smallDescription}
           </p>{" "}
         </div>
