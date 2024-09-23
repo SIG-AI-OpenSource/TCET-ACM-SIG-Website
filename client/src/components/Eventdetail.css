@@ -1,0 +1,11 @@
+.responsive-image{
+  display: flex;
+  /* flex-direction: col; */
+}
+
+@media(max-width:640px){
+  .responsive-image{
+    display: flex;
+    flex-direction: column;
+  }
+}

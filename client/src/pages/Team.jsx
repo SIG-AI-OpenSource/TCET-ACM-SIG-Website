@@ -28,7 +28,7 @@ const Team = () => {
           id="meetteam"
         />
         <motion.div
-          className="absolute top-[58%] sm:top-[390px] left-[5%] sm:left-[64px] w-[90%] h-[12rem] sm:h-[250px] bg-white/10 backdrop-blur-md rounded-[40px] flex justify-left flex-col items-start pt-8"
+          className="absolute top-[58%] sm:top-[390px] left-[5%] sm:left-[64px] w-[90%] h-[12rem] sm:h-[250px] bg-white/10 backdrop-blur-md rounded-[40px] flex justify-left flex-col items-start pt-8 sm:pt-4 lg:pt-8"
           initial="hidden"
           animate="visible"
           variants={fadeDownVariants}

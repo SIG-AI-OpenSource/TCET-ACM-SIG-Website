@@ -3,11 +3,15 @@
 }
 
 .about_us {
-  background-color: #C7E8FF;
+  background-color: #f0f8fe;
+  /* background-image: linear-gradient(#3F88C5,#f0f8fe); */
+  
   padding-top: 4%;
   padding-left: 4%;
   padding-bottom: 7%;
 }
+
+
 
 #head_of_about_us {
   font-size: 3rem;
@@ -23,7 +27,7 @@
   height: 80%;
   color: black;
   font-size: 2.2rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .content_about_us_right {
@@ -99,14 +103,15 @@
 }
 
 .publications {
-  background-color: #015B97;
+  /* background-color: #015B97; */
+    background-image: linear-gradient(#f0f8fe, #015B97);
   padding-top: 4%;
   padding-left: 2%;
   padding-bottom: 6%;
 }
 
 .publicationstitle{
-  color: white;
+  color: black;
   font-size: 4rem;
   padding-left: 2rem;
 }
@@ -117,7 +122,7 @@
 }
 
 .publicationyear{
-  color: white;
+  color: black;
   margin-left: 60%;
   margin-top: 2%;
   font-size: 1.5rem;
@@ -646,10 +651,16 @@ footer{
 
 .map{
   width:60%;
-  border: 5px solid black;
+  /* border: 5px solid black; */
   border-radius: 10px; 
-  box-shadow:20px 20px 4px #015B97;
+  /* box-shadow:20px 20px 4px #015B97; */
   height: 350px;
+  box-shadow: 0 0 10px #015B97,
+  0 0 20px #015B97,
+  0 0 40px #015B97;
+  /* 0 0 80px #015B97; */
+  /* 0 0 120px #015B97; */
+  /* 0 0 160px #015B97; */
 }
 
 @media(max-width:640px){
@@ -669,7 +680,7 @@ footer{
   .map{
     width:70%;
     height: 450px;
-    box-shadow:0 0px 40px #015B97,
+    /* box-shadow:0 0px 40px #015B97, */
     ;
   }
 }
