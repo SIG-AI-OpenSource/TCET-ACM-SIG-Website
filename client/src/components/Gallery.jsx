@@ -5,7 +5,7 @@ const Gallery = () => {
   return (
     <div
       style={{
-        backgroundColor: "#C7E8FF",
+        backgroundColor: "#5FA8D3",
         width: "100%",
         paddingBottom: "2%", // Reduced bottom padding to decrease gap
       }}

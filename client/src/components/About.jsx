@@ -18,9 +18,18 @@ const AboutUs = () => {
   const opacity = useTransform(scrollYProgress,[0,0.5],[1,0]);
   // const scale = useTransform(scrollYProgress)
   return (
-    <div className="about_us" id="aboutus" 
+    <div className="relative about_us" id="aboutus" 
     ref={headerRef}
     >
+      <div className="absolute top-[40%] left-[50%] tranform translatex-[50%] w-72 h-72 
+      bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 
+      animate-blob"></div>
+       <div className="absolute top-[40%] left-[60%] w-72 h-72 
+      bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 
+       animate-blob animation-delay-2000"></div>
+       <div className="absolute top-[40%] left-[70%] w-72 h-72 
+      bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 
+       animate-blob animation-delay-4000"></div>
       <motion.p id="head_of_about_us" className="appearanimation" ref={headerRef}
     initial={{ opacity: 0, x: 50 }}
     animate={{ opacity: headerInView ? 1 : 0, x: headerInView ? 0 : 50 }}

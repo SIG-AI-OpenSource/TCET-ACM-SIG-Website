@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import About from "../components/About";
 import Publications from "../components/Publications";
@@ -14,6 +14,35 @@ import { motion, useInView, useAnimation } from "framer-motion";
 ></link>;
 
 const Home = () => {
+
+  const [time,setTime] = useState(new Date().toLocaleTimeString());
+
+  const [heroLink,setHeroLink] = useState("");
+
+  const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png"," https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png"]
+  useEffect(
+    ()=>{
+      if((time.slice(8)=='AM')&&((time.slice(0,1)>=6) && (time.slice(0,1)<10))){
+        setHeroLink(heroImageLink[1]);
+        console.log(time.slice(8));
+      }
+      else if(((time.slice(9)=='AM')&&(time.slice(0,2)>=10 && time.slice(0,2)<12))||
+      ((time.slice(9)=='PM')&&(time.slice(0,2)==12))||
+      ((time.slice(8)=='PM')&&(time.slice(0,1)<5))){
+        setHeroLink(heroImageLink[2]);
+      }
+      else if((time.slice(8)=='PM')&&(time.slice(0,1)>=5 && time.slice(0,1)<7)){
+        setHeroLink(heroImageLink[1]);
+      }
+      else if(((time.slice(8)=='PM')&&(time.slice(0,1)>7 && time.slice(0,1)<10)) || 
+      ((time.slice(9)=='AM')&&(time.slice(0,2)>=10 )) || 
+      ((time.slice(8)=='AM')&&(time.slice(0,1)<6))){
+        setHeroLink(heroImageLink[0]);
+      }
+    }
+    ,[]);
+
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -25,13 +54,18 @@ const Home = () => {
     }
   }, [isInView]);
 
+  // https://res.cloudinary.com/ds8oawwu2/image/upload/v1726159046/download_4_tvrrce.png
+
+  // https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg
   return (
     <div ref={ref}>
       <div id="home">
         <img
-          src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1727114183/download_6__enhanced_pc2ype.png"
+
+          src={heroLink}
+
           alt="Descriptive Alt Text"
-          className="w-screen h-[100vh] object-cover sm:object-cover"
+          className="w-screen h-[100vh] object-cover sm:object-cover "
         />
 
         {/* Container for the text and button */}
@@ -49,10 +83,13 @@ const Home = () => {
           <h1 className="homeheroh1">Welcome to</h1>
 
           {/* TCET ACM-SIGAI Text */}
-          <h2 className="homeheroh2">
-            TCET ACM
-            <br className="sm:hidden" />
-            SIGAI
+
+          <h2
+          
+            className="homeheroh2"
+          >
+            TCET ACM<br className="sm:hidden"/><span className="hidden sm:inline">-</span>SIGAI
+
           </h2>
 
           {/* Student's Chapter Text */}

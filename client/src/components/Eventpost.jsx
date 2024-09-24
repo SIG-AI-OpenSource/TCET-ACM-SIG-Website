@@ -25,7 +25,7 @@ const Eventpost = () => {
       </h1>
 
       {/* cards section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-6 space-y-5">
+      <div className="grid grid-cols-1 grid-cols-2 md:grid-cols-3 place-items-center gap-6 space-y-5">
         {events &&
           events.map((event) => (
             <Link to={`/events/${event._id}#top`} key={event._id}>
@@ -40,7 +40,7 @@ const Eventpost = () => {
                 <img
                   src={event.image.url}
                   alt={event.image.fileName}
-                  className="w-full max-w-[400px] h-[410px] rounded-lg object-cover"
+                  className=" w-full max-w-[400px] h-[410px] rounded-lg  object-cover"
                   loading="lazy"
                 />
                 {/* overlay section */}

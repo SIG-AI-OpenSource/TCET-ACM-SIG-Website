@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../services/useFetch";
 
+
 const Eventdetail = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch(
@@ -21,6 +22,7 @@ const Eventdetail = () => {
   const { title, largeImage, smallDescription, detailInfo } = data;
 
   return (
+
     <div id="top" className="text-white bg-[#015B97] pt-8 md:pt-0">
       <div className="flex flex-col md:flex-row bg-white">
         <div className="text-center p-4 md:w-1/2">
@@ -28,6 +30,7 @@ const Eventdetail = () => {
             {title}
           </h1>
           <p className="text-lg md:text-xl font-semibold text-gray-500 mt-4 md:mt-8 text-justify px-4 md:px-12">
+
             {smallDescription}
           </p>
         </div>

@@ -13,7 +13,8 @@ const Core = () => {
         <div className="team-row group">
           <div className="container3 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] 
           hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
+          hover:z-10">
             <div className="image3 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948863/core/diya_chairperson.png"
@@ -33,7 +34,8 @@ const Core = () => {
           </div>
 
           <div className="container4 relative container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 sm:hover:right-10 group/linkedin" >
+          sm:hover:!scale-100 sm:hover:right-10 group/linkedin 
+          hover:z-10" >
             <div className="image4 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725951014/core/iiimwqfj047tvopy6uug.png"
@@ -44,15 +46,16 @@ const Core = () => {
             </div>
             <h1 className="role z-10">VICE-CHAIRPERSON</h1>
             <h2 className="diya">Satish Gupta</h2>
-            <a href="https://www.linkedin.com/in/satish-gupta-5a0374259/" className="absolute top-0 right-full sm:left-0 text-4xl hidden group-hover/linkedin:inline linked-in z-50" > 
+            <a href="https://www.linkedin.com/in/satish-gupta-5a0374259/" className="absolute top-0 right-full sm:left-0 text-4xl hidden group-hover/linkedin:inline linked-in z-40" > 
             <FaLinkedin />
             </a>
-            <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Vice Chairperson, Satish Gupta! Satish combines sharp intelligence, unwavering confidence, and remarkable talent to elevate our team. His exceptional problem-solving and decision-making skills ensure that challenges are met with innovative solutions and clear direction. Efficiently managing our team with both insight and authority, Satish inspires excellence and fosters a collaborative environment. Here’s to achieving great heights together, Satish!
+            <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:z-50 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Vice Chairperson, Satish Gupta! Satish combines sharp intelligence, unwavering confidence, and remarkable talent to elevate our team. His exceptional problem-solving and decision-making skills ensure that challenges are met with innovative solutions and clear direction. Efficiently managing our team with both insight and authority, Satish inspires excellence and fosters a collaborative environment. Here’s to achieving great heights together, Satish!
             </div>
           </div>
 
           <div className="container5 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
+          hover:z-10">
             <div className="image5 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949344/core/ywumqilwpvzt512vy6ip.png"
@@ -76,7 +79,8 @@ const Core = () => {
         {/* Second Row */}
         <div className="team-row group">
           <div className="container6 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin
+          hover:z-10">
             <div className="image6 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950556/core/gjwvkeqwbno75mkdsikt.png"
@@ -95,7 +99,8 @@ const Core = () => {
           </div>
 
           <div className="container7 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:right-10 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:right-10 group/linkedin 
+          hover:z-10">
             <div className="image7 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948851/core/Akshita.png"
@@ -116,7 +121,8 @@ const Core = () => {
           </div>
 
           <div className="container8 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
+          hover:z-10">
             <div className="image8 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949777/core/jehsab12iettdkrkudal.png"
@@ -143,7 +149,8 @@ const Core = () => {
         {/* Third Row */}
         <div className="team-row group">
           <div className="container9 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
+          hover:z-10">
             <div className="image9 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949365/core/zpiihbos0mjcro1edmjo.png"
@@ -167,7 +174,8 @@ const Core = () => {
           </div>
 
           <div className="container10 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
+          hover:z-10">
             <div className="image10 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950522/core/kbjplqfwnxrfonjntgxh.png"
@@ -186,7 +194,8 @@ const Core = () => {
           </div>
 
           <div className="container11 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin">
+          sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
+          hover:z-10">
             <div className="image11 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948851/core/Khushi.png"
@@ -208,7 +217,8 @@ const Core = () => {
         {/* Fourth Row */}
         <div className="team-row group">
           <div className="container12 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative group/linkedin">
+          sm:hover:!scale-100 relative group/linkedin 
+          hover:z-10">
             <div className="image12 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950785/core/ptel6ita0jxneebsqzr3.png"
@@ -227,7 +237,8 @@ const Core = () => {
           </div>
 
           <div className="container13 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
-          sm:hover:!scale-100 relative group/linkedin">
+          sm:hover:!scale-100 relative group/linkedin 
+          hover:z-10">
             <div className="image13 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950442/core/w5hms3dbptjzzukjc2ox.png"

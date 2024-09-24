@@ -92,7 +92,9 @@ const Contact = () => {
   };
 
   return (
+
     <div id="contactus" className="contact-container">
+
       <div className="contact-left">
         <h1 className="text-2xl sm:text-5xl">Contact Us</h1>
         <p className="pt-2 sm:pt-10 text-[1.1rem] sm:text-[1.9rem] mb-2">
