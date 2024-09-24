@@ -15,28 +15,25 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 const Home = () => {
 
-  const [time,setTime] = useState(new Date().toLocaleTimeString());
+  const options = {hour12:false,hour:'2-digit'};
+  const [time,setTime] = useState(parseInt(new Date().toLocaleTimeString("en-IN",options)));
+
 
   const [heroLink,setHeroLink] = useState("");
 
   const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png"," https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png"]
   useEffect(
     ()=>{
-      if((time.slice(8)=='AM')&&((time.slice(0,1)>=6) && (time.slice(0,1)<10))){
-        setHeroLink(heroImageLink[1]);
-        console.log(time.slice(8));
-      }
-      else if(((time.slice(9)=='AM')&&(time.slice(0,2)>=10 && time.slice(0,2)<12))||
-      ((time.slice(9)=='PM')&&(time.slice(0,2)==12))||
-      ((time.slice(8)=='PM')&&(time.slice(0,1)<5))){
+      if(time>=10&&time<17){
+        console.log(time);
         setHeroLink(heroImageLink[2]);
-      }
-      else if((time.slice(8)=='PM')&&(time.slice(0,1)>=5 && time.slice(0,1)<7)){
+      } 
+      else if((time>6&&time<10)||(time>=17&&time<19)){
+        console.log(time);
         setHeroLink(heroImageLink[1]);
       }
-      else if(((time.slice(8)=='PM')&&(time.slice(0,1)>7 && time.slice(0,1)<10)) || 
-      ((time.slice(9)=='AM')&&(time.slice(0,2)>=10 )) || 
-      ((time.slice(8)=='AM')&&(time.slice(0,1)<6))){
+      else if((time>=19&&time<24)||(time>=0&&time<6)){
+        console.log(time);
         setHeroLink(heroImageLink[0]);
       }
     }
