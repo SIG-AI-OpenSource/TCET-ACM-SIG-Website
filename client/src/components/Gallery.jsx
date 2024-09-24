@@ -9,7 +9,6 @@ const Gallery = () => {
         width: "100%",
         paddingBottom: "2%", // Reduced bottom padding to decrease gap
       }}
-
       id="gallery"
     >
       <h1
@@ -19,7 +18,7 @@ const Gallery = () => {
           color: "white",
           marginTop: "0",
           marginBottom: "2%",
-          fontWeight:'450', // Reduced margin bottom to decrease gap
+          fontWeight: "450", // Reduced margin bottom to decrease gap
         }}
       >
         Gallery
@@ -39,7 +38,7 @@ const Gallery = () => {
           {/* Gallery items */}
           <div className="item" style={{ "--position": 1 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1727115919/Screenshot_2024-09-23_235507_zldgyr.png"
               alt="Gallery Image 1"
             />
           </div>
@@ -51,31 +50,31 @@ const Gallery = () => {
           </div>
           <div className="item" style={{ "--position": 3 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726990713/AI_L_gnabq1.jpg"
               alt="Gallery Image 3"
             />
           </div>
           <div className="item" style={{ "--position": 4 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726990712/FIN_S_zfzoqm.jpg"
               alt="Gallery Image 4"
             />
           </div>
           <div className="item" style={{ "--position": 5 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1727115857/Screenshot_2024-09-23_235359_psphju.png"
               alt="Gallery Image 5"
             />
           </div>
           <div className="item" style={{ "--position": 6 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1727116211/Screenshot_2024-09-23_235937_ysy0lt.png"
               alt="Gallery Image 6"
             />
           </div>
           <div className="item" style={{ "--position": 7 }}>
             <img
-              src="https://framerusercontent.com/images/X1smPCKbAyfgGAcZp9Xs89QXqTQ.jpg?scale-down-to=512"
+              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1727116210/Screenshot_2024-09-23_235818_lmv1xy.png"
               alt="Gallery Image 7"
             />
           </div>
@@ -168,4 +167,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-

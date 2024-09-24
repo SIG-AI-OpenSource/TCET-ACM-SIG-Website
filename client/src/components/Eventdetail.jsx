@@ -10,41 +10,47 @@ const Eventdetail = () => {
   );
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top on component mount
+    window.scrollTo(0, 0);
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p className="text-center p-4">Loading...</p>;
+  if (error)
+    return (
+      <p className="text-center p-4 text-red-500">Error: {error.message}</p>
+    );
 
-  // Assuming the data structure matches what we discussed earlier
   const { title, largeImage, smallDescription, detailInfo } = data;
 
   return (
-    <div id="top" className="text-white bg-[#015B97] px-4 py-16">
-      <div className="flex justify-between bg-white">
-        <div className="text-center">
-          <h1 className="text-5xl text-gray-800 font-bold  pt-24">{title}</h1>
-          <p className="text-xl font-semibold  text-gray-500 mb-8 pt-20 text-justify  px-40 ">
+
+    <div id="top" className="text-white bg-[#015B97] pt-8 md:pt-0">
+      <div className="flex flex-col md:flex-row bg-white">
+        <div className="text-center p-4 md:w-1/2">
+          <h1 className="text-3xl md:text-5xl text-gray-800 font-bold pt-8 md:pt-24">
+            {title}
+          </h1>
+          <p className="text-lg md:text-xl font-semibold text-gray-500 mt-4 md:mt-8 text-justify px-4 md:px-12">
+
             {smallDescription}
-          </p>{" "}
+          </p>
         </div>
-        <div>
+        <div className="md:w-1/2">
           <img
             src={largeImage.url}
             alt={title}
-            className="h-[640px] w-[3000px] object-cover"
+            className="w-full h-64 md:h-[640px] object-cover"
             loading="lazy"
           />
         </div>
-
-        {/* <div className="w-3/4 mx-auto border-t-2 border-yellow-400 mb-8" /> */}
       </div>
-      <div className="pb-60 pt-20 bg-[#015B97]">
-        <div className="w-full max-w-3xl mx-auto text-white">
+      <div className="py-12 md:py-20 bg-[#015B97]">
+        <div className="w-full max-w-3xl mx-auto text-white px-4">
           {detailInfo.map((info, index) => (
-            <div key={index} className="mb-10 text-center space-y-2">
-              <h3 className="text-5xl font-bold pb-4">{info.title}</h3>
-              <p className="text-2xl pt-2 text-justify pb-4 ">
+            <div key={index} className="mb-8 md:mb-10 text-center space-y-2">
+              <h3 className="text-3xl md:text-5xl font-bold pb-2 md:pb-4">
+                {info.title}
+              </h3>
+              <p className="text-lg md:text-2xl pt-2 text-justify">
                 {info.paragraph}
               </p>
             </div>

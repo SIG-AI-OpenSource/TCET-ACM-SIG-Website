@@ -35,8 +35,7 @@ const Contact = () => {
     const web3FormsAccessKey = "Paste_Your_api_Key";
 
     // Google Apps Script web app URL
-    const googleScriptURL =
-      "Paste_Your_Google_API";
+    const googleScriptURL = "Paste_Your_Google_API";
 
     try {
       // Submit to Web3Forms (for email)
@@ -93,7 +92,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container" id="contactus">
+
+    <div id="contactus" className="contact-container">
+
       <div className="contact-left">
         <h1 className="text-2xl sm:text-5xl">Contact Us</h1>
         <p className="pt-2 sm:pt-10 text-[1.1rem] sm:text-[1.9rem] mb-2">
@@ -188,18 +189,18 @@ const Contact = () => {
                 onChange={handleChange}
               />
             </div>
-          
-          <div className="field-item grow">
-            <label htmlFor="message">Message</label>
-            <textarea
-              placeholder="Your message..."
-              name="message"
-              id="message"
-              required
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
+
+            <div className="field-item grow">
+              <label htmlFor="message">Message</label>
+              <textarea
+                placeholder="Your message..."
+                name="message"
+                id="message"
+                required
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
           </div>
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Submitting..." : "Submit"}

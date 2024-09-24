@@ -61,6 +61,10 @@ main {
   animation: reversePlay 20s linear infinite;
 }
 
+.Imagefit {
+  background-size: rounded;
+}
+
 @keyframes reversePlay {
   from {
     left: calc(var(--width) * -1);

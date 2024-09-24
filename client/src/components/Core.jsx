@@ -179,17 +179,17 @@ const Core = () => {
             <div className="image10 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950522/core/kbjplqfwnxrfonjntgxh.png"
-                alt="Priyanshu Shah"
+                alt="Priyanshu Sah"
                 width="215px"
                 height="250px"
               />
             </div>
             <h1 className="role">TECHNICAL HEAD</h1>
-            <h2 className="diya">Priyanshu Shah</h2>
+            <h2 className="diya">Priyanshu Sah</h2>
             <a href="https://www.linkedin.com/in/priyanshu123sah/" className="absolute top-0 right-full sm:left-0 text-4xl hidden group-hover/linkedin:inline linked-in z-50" > 
             <FaLinkedin />
             </a>
-            <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info">Introducing our incredible Technical Head, Priyanshu Shah!💻 Priyanshu brings unmatched expertise and confidence to our team, managing all our tech needs with precision and skill. His sharp intelligence and quick wit make him not just a tech genius but a fantastic team player. We’re thrilled to welcome such a dynamic and brilliant leader aboard!
+            <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info">Introducing our incredible Technical Head, Priyanshu Sah!💻 Priyanshu brings unmatched expertise and confidence to our team, managing all our tech needs with precision and skill. His sharp intelligence and quick wit make him not just a tech genius but a fantastic team player. We’re thrilled to welcome such a dynamic and brilliant leader aboard!
             </div>
           </div>
 
