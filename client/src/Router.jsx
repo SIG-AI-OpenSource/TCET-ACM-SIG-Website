@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Events from "./pages/Events";
 import Eventdetail from "./components/Eventdetail";
+import Pubs from "./pages/Pubs";
 
 const appRouter = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/team",
         element: <Team />,
+      },
+      {
+        path: "/pubs",
+        element: <Pubs />,
       },
       {
         path: "/events",

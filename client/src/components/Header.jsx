@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import "./home.css";
-import {HashLink as Hlink} from "react-router-hash-link";
-import {FaTimes} from "react-icons/fa";
-import {CiMenuFries} from "react-icons/ci";
+import { HashLink as Hlink } from "react-router-hash-link";
+import { FaTimes } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { scrollY } = useScroll();
-  const [click,setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
-  const handleClick =()=>{
+  const handleClick = () => {
     setClick(!click);
-  }
+  };
 
   useEffect(() => {
     const updateHeader = () => {
@@ -32,37 +32,39 @@ const Header = () => {
     return () => unsubscribe();
   }, [scrollY, lastScrollY]);
 
-  const content = <>
-  <div className="sm:hidden transition block absolute top-14 w-screen right-0 bg-slate-900 ">
-    <ul className="text-center text-xl">
-      <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-        <Link to="/" smooth>
-          Home
-        </Link>
-      </li>
-      <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-      <Hlink smooth to="/events/#eventtop" >
-          Events
-        </Hlink>
-      </li>
-      <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-      <Hlink to="/team/#meetteam" smooth>
-          Meet the Team
-        </Hlink> 
-      </li>
-      <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-      <Hlink to="/#publication" smooth>
-          Publications
-        </Hlink>
-      </li>
-      <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-      <Hlink to="/#contactus" smooth>
-          Contact us
-      </Hlink>
-      </li>
-    </ul>
-  </div>
-  </>
+  const content = (
+    <>
+      <div className="sm:hidden transition block absolute top-14 w-screen right-0 bg-slate-900 ">
+        <ul className="text-center text-xl">
+          <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Link to="/" smooth>
+              Home
+            </Link>
+          </li>
+          <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Hlink smooth to="/events/#eventtop">
+              Events
+            </Hlink>
+          </li>
+          <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Hlink to="/team/#meetteam" smooth>
+              Meet the Team
+            </Hlink>
+          </li>
+          <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Hlink to="/#publication" smooth>
+              Publications
+            </Hlink>
+          </li>
+          <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Hlink to="/#contactus" smooth>
+              Contact us
+            </Hlink>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
 
   return (
     <motion.header
@@ -72,41 +74,40 @@ const Header = () => {
       transition={{ duration: 0.3 }}
     >
       <div className="text-2xl pl-16 logodiv sm:text-sm">
-      <Link to="/">
-        <div className="logo">
-        </div>
-      </Link>
+        <Link to="/">
+          <div className="logo"></div>
+        </Link>
         <div className="circle">
-          <span style={{"--i":1}}>T</span>
-          <span style={{"--i":2}}>C</span>
-          <span style={{"--i":3}}>E</span>
-          <span style={{"--i":5}}>-</span>
-          <span style={{"--i":6}}>A</span>
-          <span style={{"--i":4}}>T</span>
-          <span style={{"--i":7}}>C</span>
-          <span style={{"--i":8}}>M</span>
-          <span style={{"--i":9}}>-</span>
-          <span style={{"--i":10}}>S</span>
-          <span style={{"--i":11}}>I</span>
-          <span style={{"--i":12}}>G</span>
-          <span style={{"--i":13}}>A</span>
-          <span style={{"--i":14}}>I</span>
-          <span style={{"--i":15}}>-</span>
-          <span style={{"--i":16}}>S</span>
-          <span style={{"--i":17}}>T</span>
-          <span style={{"--i":18}}>U</span>
-          <span style={{"--i":19}}>D</span>
-          <span style={{"--i":20}}>E</span>
-          <span style={{"--i":21}}>N</span>
-          <span style={{"--i":22}}>T</span>
-          <span style={{"--i":23}}>-</span>
-          <span style={{"--i":24}}>C</span>
-          <span style={{"--i":25}}>H</span>
-          <span style={{"--i":26}}>A</span>
-          <span style={{"--i":27}}>P</span>
-          <span style={{"--i":28}}>T</span>
-          <span style={{"--i":29}}>E</span>
-          <span style={{"--i":30}}>R</span>
+          <span style={{ "--i": 1 }}>T</span>
+          <span style={{ "--i": 2 }}>C</span>
+          <span style={{ "--i": 3 }}>E</span>
+          <span style={{ "--i": 5 }}>-</span>
+          <span style={{ "--i": 6 }}>A</span>
+          <span style={{ "--i": 4 }}>T</span>
+          <span style={{ "--i": 7 }}>C</span>
+          <span style={{ "--i": 8 }}>M</span>
+          <span style={{ "--i": 9 }}>-</span>
+          <span style={{ "--i": 10 }}>S</span>
+          <span style={{ "--i": 11 }}>I</span>
+          <span style={{ "--i": 12 }}>G</span>
+          <span style={{ "--i": 13 }}>A</span>
+          <span style={{ "--i": 14 }}>I</span>
+          <span style={{ "--i": 15 }}>-</span>
+          <span style={{ "--i": 16 }}>S</span>
+          <span style={{ "--i": 17 }}>T</span>
+          <span style={{ "--i": 18 }}>U</span>
+          <span style={{ "--i": 19 }}>D</span>
+          <span style={{ "--i": 20 }}>E</span>
+          <span style={{ "--i": 21 }}>N</span>
+          <span style={{ "--i": 22 }}>T</span>
+          <span style={{ "--i": 23 }}>-</span>
+          <span style={{ "--i": 24 }}>C</span>
+          <span style={{ "--i": 25 }}>H</span>
+          <span style={{ "--i": 26 }}>A</span>
+          <span style={{ "--i": 27 }}>P</span>
+          <span style={{ "--i": 28 }}>T</span>
+          <span style={{ "--i": 29 }}>E</span>
+          <span style={{ "--i": 30 }}>R</span>
         </div>
       </div>
       {/* <div class="max-w-screen-md flex flex-wrap items-center justify-between mx-auto p-4 sm:hidden">
@@ -136,25 +137,44 @@ const Header = () => {
       <div className="sm:hidden transition" onClick={handleClick}>
         {click && content}
       </div>
-        
+
       <button onClick={handleClick} className="sm:hidden mr-2">
-        {click ? <FaTimes/>:<CiMenuFries/>}
+        {click ? <FaTimes /> : <CiMenuFries />}
       </button>
 
-      <nav className="space-x-4 font-bold flex-grow justify-center text-base hidden sm:flex group" >
-        <Hlink to="/" smooth className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+      <nav className="space-x-4 font-bold flex-grow justify-center text-base hidden sm:flex group">
+        <Hlink
+          to="/"
+          smooth
+          className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
+        >
           Home
         </Hlink>
-        <Hlink smooth to="/events/#eventtop" className=" navlinks cursor-pointer duration-0 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+        <Hlink
+          smooth
+          to="/events/#eventtop"
+          className=" navlinks cursor-pointer duration-0 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
+        >
           Events
         </Hlink>
-        <Hlink to="/team/#meetteam" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+        <Hlink
+          to="/team/#meetteam"
+          className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
+        >
           Meet the Team
         </Hlink>
-        <Hlink to="/#publication" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" smooth>
+        <Hlink
+          to="/pubs"
+          className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
+          smooth
+        >
           Publications
         </Hlink>
-        <Hlink to="/#contactus" className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" smooth>
+        <Hlink
+          to="/#contactus"
+          className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
+          smooth
+        >
           Contact us
         </Hlink>
         {/* <hr /> */}
