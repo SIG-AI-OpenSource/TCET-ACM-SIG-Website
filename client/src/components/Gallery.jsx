@@ -16,7 +16,7 @@ const Gallery = () => {
         style={{
           fontSize: "6rem",
           textAlign: "center",
-          color: "black",
+          color: "white",
           marginTop: "0",
           marginBottom: "2%",
           fontWeight:'450', // Reduced margin bottom to decrease gap

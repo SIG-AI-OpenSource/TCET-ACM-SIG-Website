@@ -104,7 +104,7 @@
 
 .publications {
   /* background-color: #015B97; */
-    background-image: linear-gradient(#f0f8fe, #015B97);
+  background-image: linear-gradient(#f0f8fe, #015B97);
   padding-top: 4%;
   padding-left: 2%;
   padding-bottom: 6%;
@@ -646,7 +646,7 @@ footer{
   color: white;
   display:flex;
   justify-content:center;
-  background-color:#C7E8FF;
+  background-color:#F0F8FE;
 }
 
 .map{
