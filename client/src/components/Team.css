@@ -373,3 +373,24 @@
   100px 0 #ff2d7599,
 }
 
+.tracker{
+position: fixed;
+transform: translate(-50%,-50%);
+height: 40px;
+width: 40px;
+border: 1px solid white;
+border-radius: 100%;
+top:-20px;
+left:-20px;
+z-index: 9999;
+pointer-events: none;
+transition: all .15s;
+}
+
+.roboimage{
+  /* position: fixed; */
+  width: 100%;
+  height: 100%;
+  background-image: url('C:\Users\DELL\Desktop\ACM-SIGAI\TCET-ACM-SIG-Website\client\src\components\tabicon.jpg');
+}
+
