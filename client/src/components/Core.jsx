@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Core = () => {
   return (
     <div className="pb-0 sm:pb-10 pt-4" style={{ backgroundColor: "#1C0773" }}>
-      <div className="core">
+      <div className="core relative">
         <h1 className="title2">Meet the Team</h1>
         <h1 className="title">Core</h1>
 
@@ -354,7 +354,7 @@ const Core = () => {
             <h2 className="diya">Kartik Bankar</h2>
           </div>
         </div>
-        <div className="particles">
+        {/* <div className="particles relative">
           <span style={{ "--j": 11 }}></span>
           <span style={{ "--j": 12 }}></span>
           <span style={{ "--j": 24 }}></span>
@@ -395,7 +395,7 @@ const Core = () => {
           <span style={{ "--j": 17 }}></span>
           <span style={{ "--j": 13 }}></span>
           <span style={{ "--j": 28 }}></span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

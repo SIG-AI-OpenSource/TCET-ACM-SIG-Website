@@ -27,6 +27,7 @@
   height: 80%;
   color: black;
   font-size: 2.2rem;
+  text-align: justify;
   font-family: "Poppins", sans-serif;
 }
 
@@ -264,6 +265,7 @@
   color: white;
   width: 45%;
   font-size: 2rem;
+  text-align: justify;
 }
 
 @media(max-width:640px){

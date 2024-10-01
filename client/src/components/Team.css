@@ -311,13 +311,13 @@
 
 @keyframes particleanimate{
   0%{
-    transform: translateY(100vh) scale(0) rotate(0deg);
+    transform: translateY(80vh) scale(0) rotate(0deg);
   }
   20%{
-    transform: translateY(100vh) scale(1) rotate(0deg);
+    transform: translateY(80vh) scale(1) rotate(0deg);
   }
   100%{
-    transform: translateY(-500vh) scale(0.5) rotate(360deg);
+    transform: translateY(-2000%) scale(0.5) rotate(360deg);
   }
 }
 
