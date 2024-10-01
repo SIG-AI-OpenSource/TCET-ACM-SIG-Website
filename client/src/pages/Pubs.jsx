@@ -8,7 +8,7 @@ const Pubs = () => {
     threshold: 0.2,
   });
   return (
-    <div className="publications" id="publication" ref={headerRef}>
+    <div className="publications" id="publications" ref={headerRef}>
       <div className="magazineblock group">
         <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           <a

@@ -364,7 +364,7 @@
   }
   
   .publicationstitle{
-    color: white;
+    color: black;
     font-size: 2rem;
     padding-left: 1rem;
   }
@@ -376,7 +376,7 @@
   }
 
   .publicationyear{
-    color: white;
+    color: black;
     margin-left: 2rem;
     /* margin-left: 60%; */
     /* margin-top: 2%; */

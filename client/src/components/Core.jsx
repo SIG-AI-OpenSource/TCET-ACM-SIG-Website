@@ -3,9 +3,32 @@ import "./Team.css"; // Make sure you have your CSS in place
 import { FaLinkedin } from "react-icons/fa";
 
 const Core = () => {
+  // const tracker = document.querySelector(".tracker");
+  // // const mouse = {x:0,y:0}
+  // // const circle = {x:0,y:0}
+  // document.body.addEventListener("mousemove", (e) => {
+  //   const height = tracker.offsetHeight;
+  //   const width = tracker.offsetWidth;
+    
+  //     tracker.style.left = `${e.pageX - width/2}px`;
+  //     tracker.style.top = `${e.pageY - height/2}px`;
+  //   // mouse.x = e.x;
+  //   // mouse.y = e.y;
+  // });
+  // const speed = 0.17;
+  // const tick = ()=>{
+  //   circle.x +=(mouse.x - circle.x) *speed;
+  //   circle.y +=(mouse.y - circle.y) *speed;
+  //   circle.style.transform = `translate(${circle.x}px,${circle.y}px)`
+  //   window.requestAnimationFrame(tick);
+
+  // }
+
+  // tick();
+
   return (
     <div className="pb-0 sm:pb-10 pt-4" style={{ backgroundColor: "#1C0773" }}>
-      <div className="core relative">
+      <div className="core">
         <h1 className="title2">Meet the Team</h1>
         <h1 className="title">Core</h1>
 
@@ -354,6 +377,9 @@ const Core = () => {
             <h2 className="diya">Kartik Bankar</h2>
           </div>
         </div>
+        {/* <div className="tracker">
+        </div> */}
+        
         {/* <div className="particles relative">
           <span style={{ "--j": 11 }}></span>
           <span style={{ "--j": 12 }}></span>
@@ -397,6 +423,7 @@ const Core = () => {
           <span style={{ "--j": 28 }}></span>
         </div> */}
       </div>
+   
     </div>
   );
 };

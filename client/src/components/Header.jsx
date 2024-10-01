@@ -52,7 +52,7 @@ const Header = () => {
             </Hlink>
           </li>
           <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-            <Hlink to="/#publication" smooth>
+            <Hlink to="/pubs/#publications" smooth>
               Publications
             </Hlink>
           </li>

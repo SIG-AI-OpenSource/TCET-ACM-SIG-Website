@@ -101,7 +101,7 @@ const Home = () => {
 
           {/* Learn More Button */}
           <a
-            href="#"
+            href="#aboutus"
             className="mt-5 bg-purple-600 text-white py-3 px-6 rounded-full text-lg font-medium hover:bg-purple-800 transition homeheroatag"
           >
             Learn more →

@@ -41,14 +41,14 @@ const Footer = () => {
           <br />
           <div className="sm:hidden contact-links-footer">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/tcet-acm-sig-ai-9515072b9"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="link-logo-footer" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/tcet_acm.sigai/"
               target="_blank"
               rel="noopener noreferrer"
             >
