@@ -1,30 +1,36 @@
 import React from "react";
 import "./Team.css"; // Make sure you have your CSS in place
 import { FaLinkedin } from "react-icons/fa";
+import Tilt from "react-parallax-tilt";
 
 const Core = () => {
-  // const tracker = document.querySelector(".tracker");
-  // // const mouse = {x:0,y:0}
-  // // const circle = {x:0,y:0}
-  // document.body.addEventListener("mousemove", (e) => {
-  //   const height = tracker.offsetHeight;
-  //   const width = tracker.offsetWidth;
+  const images = document.querySelectorAll(".card__img");
+  const backgrounds = document.querySelectorAll(".card__bg");
+  const range = 40;
+
+  const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+
+  let timeout;
+  document.addEventListener('mousemove', ({x, y}) => {
+  if (timeout) {
+    window.cancelAnimationFrame(timeout);
+  }
     
-  //     tracker.style.left = `${e.pageX - width/2}px`;
-  //     tracker.style.top = `${e.pageY - height/2}px`;
-  //   // mouse.x = e.x;
-  //   // mouse.y = e.y;
-  // });
-  // const speed = 0.17;
-  // const tick = ()=>{
-  //   circle.x +=(mouse.x - circle.x) *speed;
-  //   circle.y +=(mouse.y - circle.y) *speed;
-  //   circle.style.transform = `translate(${circle.x}px,${circle.y}px)`
-  //   window.requestAnimationFrame(tick);
+  timeout = window.requestAnimationFrame(() => {
+    const yValue = calcValue(y, window.innerHeight);
+    const xValue = calcValue(x, window.innerWidth);
 
-  // }
+    // cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
 
-  // tick();
+    [].forEach.call(images, (image) => {
+      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+    });
+
+    [].forEach.call(backgrounds, (background) => {
+      background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
+    })
+  })
+}, false);
 
   return (
     <div className="pb-0 sm:pb-10 pt-4" style={{ backgroundColor: "#1C0773" }}>
@@ -38,12 +44,15 @@ const Core = () => {
           hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
           hover:z-10">
+            <div class="card__bg"></div>
+            <Tilt>
             <div className="image3 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948863/core/diya_chairperson.png"
                 alt="Diya Binoy"
                 width="240px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">CHAIRPERSON</h1>
@@ -53,18 +62,21 @@ const Core = () => {
             </a>
             <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Chairperson, Diya Manapetty! Diya’s beauty is matched by her inner grace, with kindness that deeply enriches every aspect of her work. Her dedication, resilience, and unwavering commitment not only drive our team forward but also creates a harmonious and motivated environment. Diya’s adept management and inspiring leadership ensure we achieve our best. We are thrilled to have such a visionary and compassionate leader guiding us. Here’s to an extraordinary journey with you, Diya!
             </div>
-          
+            </Tilt>
           </div>
 
           <div className="container4 relative container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 sm:hover:right-10 group/linkedin 
           hover:z-10" >
+            <div class="card__bg"></div>
+            <Tilt>
             <div className="image4 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725951014/core/iiimwqfj047tvopy6uug.png"
                 alt="Satish Gupta"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role z-10">VICE-CHAIRPERSON</h1>
@@ -74,17 +86,21 @@ const Core = () => {
             </a>
             <div className="absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:z-50 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Vice Chairperson, Satish Gupta! Satish combines sharp intelligence, unwavering confidence, and remarkable talent to elevate our team. His exceptional problem-solving and decision-making skills ensure that challenges are met with innovative solutions and clear direction. Efficiently managing our team with both insight and authority, Satish inspires excellence and fosters a collaborative environment. Here’s to achieving great heights together, Satish!
             </div>
+            </Tilt>
           </div>
 
           <div className="container5 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
           hover:z-10">
+            <div class="card__bg"></div>
+            <Tilt>
             <div className="image5 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949344/core/ywumqilwpvzt512vy6ip.png"
                 alt="Sagar Kanekar"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">SECRETARY</h1>
@@ -93,8 +109,9 @@ const Core = () => {
             <a href="https://www.linkedin.com/in/sagar-kanekar-966060260/" className="absolute top-0 right-full sm:right-0 text-4xl hidden group-hover/linkedin:inline linked-in z-50" > 
             <FaLinkedin />
             </a>
-            <div className=" absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[-100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info2">Meet our exceptional Secretary, Sagar Kanekar! Sagar’s unwavering commitment, tireless work ethic, and remarkable resilience make him an invaluable asset to our team. He handles every task with unmatched efficiency, ensuring everything runs smoothly. His savage wit and sharp personality bring a unique energy to the team, balancing professionalism with a refreshing edge. We’re excited to welcome such a dedicated and dynamic individual. Here’s to the incredible contributions you’ll bring, Sagar!
+            <div className=" absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[-100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info3">Meet our exceptional Secretary, Sagar Kanekar! Sagar’s unwavering commitment, tireless work ethic, and remarkable resilience make him an invaluable asset to our team. He handles every task with unmatched efficiency, ensuring everything runs smoothly. His savage wit and sharp personality bring a unique energy to the team, balancing professionalism with a refreshing edge. We’re excited to welcome such a dedicated and dynamic individual. Here’s to the incredible contributions you’ll bring, Sagar!
             </div>
+            </Tilt>
           </div>
 
         </div>

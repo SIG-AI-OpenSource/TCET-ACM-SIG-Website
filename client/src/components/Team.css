@@ -98,6 +98,10 @@
   font-size:0.9rem;
 }
 
+.core-info3{
+  font-size:0.85rem;
+}
+
 .linked-in{
   color: white;
   transition: 0.4s;
@@ -165,14 +169,14 @@
 }
 
 .container-memeber-border{
-  background: radial-gradient(circle, #015B97 0%, #1C0773 70%);
+  /* background: radial-gradient(circle, #015B97 0%, #1C0773 70%); */
   border-radius: 20px;
   margin-top: 2rem;
   /* transition: 1.2s; */
 }
 
 .container-memeber-border:hover{
-  background: radial-gradient(circle, rgb(211, 5, 91) 0%, #10014a 70%);
+  /* background: radial-gradient(circle, rgb(211, 5, 91) 0%, #10014a 70%); */
   
 }
 
@@ -373,24 +377,44 @@
   100px 0 #ff2d7599,
 }
 
-.tracker{
-position: fixed;
-transform: translate(-50%,-50%);
-height: 40px;
-width: 40px;
-border: 1px solid white;
-border-radius: 100%;
-top:-20px;
-left:-20px;
-z-index: 9999;
-pointer-events: none;
-transition: all .15s;
-}
-
-.roboimage{
-  /* position: fixed; */
-  width: 100%;
+.card__img {
+  position: relative;
   height: 100%;
-  background-image: url('C:\Users\DELL\Desktop\ACM-SIGAI\TCET-ACM-SIG-Website\client\src\components\tabicon.jpg');
 }
 
+.card__bg {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transform-origin: 50% 50%;
+  transform: translateZ(-50px);
+  z-index: 0;
+  height: 103%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.card__bg {
+  background: url('bg01.png') center / cover no-repeat;
+}
+
+.card__text {
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%);
+  bottom: 0;
+  display: flex;
+  flex-direction: column; 
+  height: 70px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.card__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 10px;
+  margin-bottom: 3px;
+}
