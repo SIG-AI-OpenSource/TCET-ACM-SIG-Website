@@ -28,7 +28,7 @@ const Home = () => {
 
   const [heroLink,setHeroLink] = useState("");
 
-  const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png"," https://res.cloudinary.com/df9us90ur/image/upload/v1727779780/morningeveningheroimage.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png","https://res.cloudinary.com/df9us90ur/image/upload/v1727779802/IndependenceDayRepublicDayheroimage.png"]
+  const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png","https://res.cloudinary.com/divj3y2cp/image/upload/v1727876473/MorningEveningSIGAI.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png","https://res.cloudinary.com/divj3y2cp/image/upload/v1727876524/IndependencerepublicSIGAI.png"]
   useEffect(
     ()=>{
       if ((day==15 && month==8)||(day==26 && month==1)){
