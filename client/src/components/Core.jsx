@@ -4,10 +4,10 @@ import { FaLinkedin } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 
 const Core = () => {
-  const cards = document.querySelectorAll(".cards");
+  // const cards = document.querySelectorAll(".cards");
   const images = document.querySelectorAll(".card__img");
-  const backgrounds = document.querySelectorAll(".card__bg");
-  const range = 40;
+  // const backgrounds = document.querySelectorAll(".card__bg");
+  const range = 30;
 
   const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
 
@@ -21,18 +21,18 @@ const Core = () => {
     const yValue = calcValue(y, window.innerHeight);
     const xValue = calcValue(x, window.innerWidth);
 
-    [].forEach.call(cards, (cards) => {
-      cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-      // card.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
-    });
+    // [].forEach.call(cards, (cards) => {
+    //   cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+    //   // card.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+    // });
 
     [].forEach.call(images, (image) => {
       image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
     });
 
-    [].forEach.call(backgrounds, (background) => {
-      background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
-    })
+    // [].forEach.call(backgrounds, (background) => {
+    //   background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
+    // })
   })
 }, false);
 
@@ -43,13 +43,13 @@ const Core = () => {
         <h1 className="title">Core</h1>
 
         {/* First Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container3 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] 
           hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000}>
             <div className="image3 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948863/core/diya_chairperson.png"
@@ -72,8 +72,8 @@ const Core = () => {
           <div className="container4 relative container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 sm:hover:right-10 group/linkedin 
           hover:z-10" >
-            <div class="card__bg card__bg2"></div>
-            <Tilt>
+            {/* <div class="card__bg card__bg2"></div> */}
+            <Tilt perspective={2000} >
             <div className="image4 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725951014/core/iiimwqfj047tvopy6uug.png"
@@ -96,8 +96,8 @@ const Core = () => {
           <div className="container5 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg card__bg3"></div>
-            <Tilt>
+            {/* <div class="card__bg card__bg3"></div> */}
+            <Tilt perspective={2000} >
             <div className="image5 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949344/core/ywumqilwpvzt512vy6ip.png"
@@ -115,26 +115,25 @@ const Core = () => {
             </a>
             <div className=" absolute h-full w-full top-0 left-0 hidden group-hover/linkedin:block sm:group-hover/linkedin:block group-hover/linkedin:translate-x-[0%] sm:group-hover/linkedin:translate-x-[-100%] backdrop-blur-md bg-opacity-5 sm:bg-white text-white sm:text-black rounded-lg sm:group-hover/linkedin:-z-10 sm:group-hover/linkedin:duration-1000 duration-1000 transition-transform p-4 core-info core-info3">Meet our exceptional Secretary, Sagar Kanekar! Sagar’s unwavering commitment, tireless work ethic, and remarkable resilience make him an invaluable asset to our team. He handles every task with unmatched efficiency, ensuring everything runs smoothly. His savage wit and sharp personality bring a unique energy to the team, balancing professionalism with a refreshing edge. We’re excited to welcome such a dedicated and dynamic individual. Here’s to the incredible contributions you’ll bring, Sagar!
             </div>
-            </Tilt>
+            </Tilt >
           </div>
 
         </div>
 
         {/* Second Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container6 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
-
-           
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image6 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950556/core/gjwvkeqwbno75mkdsikt.png"
                 alt="Saloni Parab"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">TREASURER</h1>
@@ -150,14 +149,15 @@ const Core = () => {
           <div className="container7 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-10 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image7 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948851/core/Akshita.png"
                 alt="Akshita Chunchu"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">EVENT-MANAGER</h1>
@@ -174,14 +174,15 @@ const Core = () => {
           <div className="container8 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image8 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949777/core/jehsab12iettdkrkudal.png"
                 alt="Rahul George"
                 width="243px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">
@@ -201,18 +202,19 @@ const Core = () => {
         </div>
 
         {/* Third Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container9 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image9 member-border ">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725949365/core/zpiihbos0mjcro1edmjo.png"
                 alt="Saurabh Shukla"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">
@@ -233,14 +235,15 @@ const Core = () => {
           <div className="container10 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:right-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image10 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950522/core/kbjplqfwnxrfonjntgxh.png"
                 alt="Priyanshu Sah"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">TECHNICAL HEAD</h1>
@@ -256,14 +259,15 @@ const Core = () => {
           <div className="container11 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative sm:hover:left-12 group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image11 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725948851/core/Khushi.png"
                 alt="Khushi Sharma"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">WEBMASTER</h1>
@@ -278,18 +282,19 @@ const Core = () => {
         </div>
 
         {/* Fourth Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container12 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image12 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950785/core/ptel6ita0jxneebsqzr3.png"
                 alt="Shrutika Konduri"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">CREATIVE HEAD</h1>
@@ -305,14 +310,15 @@ const Core = () => {
           <div className="container13 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-95
           sm:hover:!scale-100 relative group/linkedin 
           hover:z-10">
-            <div class="card__bg"></div>
-            <Tilt>
+            {/* <div class="card__bg"></div> */}
+            <Tilt perspective={2000} >
             <div className="image13 member-border">
               <img
                 src="https://res.cloudinary.com/dwd7tzjo0/image/upload/v1725950442/core/w5hms3dbptjzzukjc2ox.png"
                 alt="Gayatri Poojari"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">PUBLICATION HEAD</h1>
@@ -329,7 +335,7 @@ const Core = () => {
         {/* Junior Core */}
         <h1 className="Jtitle">Junior Core</h1>
         {/* Junior Core First Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container3 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
             <div className="image3 member-border">
               <img
@@ -337,6 +343,7 @@ const Core = () => {
                 alt="Tarun Shetty"
                 width="240px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">INHOUSE HEAD</h1>
@@ -351,6 +358,7 @@ const Core = () => {
                 alt="Satish Gupta"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">
@@ -369,6 +377,7 @@ const Core = () => {
                 alt="Sagar Kanekar"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">JOINT SECRETARY</h1>
@@ -377,7 +386,7 @@ const Core = () => {
         </div>
 
         {/* Junior Core Second Row */}
-        <div className="team-row group cards">
+        <div className="team-row group ">
           <div className="container6 container-memeber-border duration-500  group-hover:blur-none hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           
             <div className="image6 member-border">
@@ -386,6 +395,7 @@ const Core = () => {
                 alt="Saloni Parab"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">
@@ -404,6 +414,7 @@ const Core = () => {
                 alt="Akshita Chunchu"
                 width="215px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">JOINT PR HEAD</h1>
@@ -418,6 +429,7 @@ const Core = () => {
                 alt="Rahul George"
                 width="243px"
                 height="250px"
+                className="card__img"
               />
             </div>
             <h1 className="role">

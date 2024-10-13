@@ -11,7 +11,7 @@ const Pubs = () => {
     data: magazines,
     loading,
     error,
-  } = useFetch("http://localhost:8080/publication"); // Adjust the URL if needed
+  } = useFetch("http://localhost:8080/latestpublication"); // Adjust the URL if needed
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -39,7 +39,7 @@ const Pubs = () => {
   // const  [views,setViews] = useState(view);
 
   return (
-    <div className="publications" id="publications">
+    // <div className="publications" id="publications">
       <motion.div
         variants={cardVariants}
         initial="hidden"
@@ -52,7 +52,7 @@ const Pubs = () => {
           magazines.map((magazine) => (
             <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" key={magazine._id}>
             
-            <a href={magazine.bookLink} key={magazine._id}
+            <a  key={magazine._id}
             target="_blank"
             rel="noopener noreferrer"
             className="center-magazine-content"
@@ -81,13 +81,8 @@ const Pubs = () => {
             </div>
           ))}
     </div>
-    <div className="text-center">
-        <h1 className="text-6xl font-semibold text-white">
-          MORE COMING SOON....
-        </h1>
-       </div>
        </motion.div>
-    </div>
+    // </div>
 
 
     // <div className="publications" id="publications" ref={headerRef}>
