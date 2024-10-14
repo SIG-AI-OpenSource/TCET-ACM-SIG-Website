@@ -17,7 +17,7 @@ const Eventpost = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
-
+// hi hello
   return (
     <div className="container mx-auto bg-blue-800 py-12 ">
       <h1 className="text-white text-center text-7xl font-semibold mb-10 pb-10">

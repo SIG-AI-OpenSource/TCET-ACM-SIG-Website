@@ -62,7 +62,7 @@ const Home = () => {
 
   // https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg
   return (
-    <div ref={ref}>
+    <div ref={ref} className="backgroundglitchfix">
       <div id="home">
         <img
 
@@ -103,6 +103,7 @@ const Home = () => {
           <a
             href="#aboutus"
             className="mt-5 bg-purple-600 text-white py-3 px-6 rounded-full text-lg font-medium hover:bg-purple-800 transition homeheroatag"
+            
           >
             Learn more →
           </a>

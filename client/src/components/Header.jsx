@@ -52,7 +52,7 @@ const Header = () => {
             </Hlink>
           </li>
           <li className="mt-2 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-            <Hlink to="/pubs/#publications" smooth>
+            <Hlink to="/publication/#publications" smooth>
               Publications
             </Hlink>
           </li>
@@ -164,7 +164,7 @@ const Header = () => {
           Meet the Team
         </Hlink>
         <Hlink
-          to="/pubs"
+          to="/publication/#publications"
           className=" navlinks cursor-pointer duration-0  group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"
           smooth
         >

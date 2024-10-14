@@ -70,6 +70,7 @@ button:focus-visible {
 html,body{
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* @media (max-width:640px){

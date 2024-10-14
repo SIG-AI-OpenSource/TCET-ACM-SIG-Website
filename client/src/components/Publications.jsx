@@ -2,6 +2,7 @@ import React,{ useRef } from "react";
 import "./home.css";
 import { motion, transform, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Publication from "./latestmagazine.jsx"; 
 
 const Publications = () => {
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -14,7 +15,7 @@ const Publications = () => {
         <div className="publicationstitle">Publications</div>
         <div className="publicationyear">2023-24</div>
       </div>
-      <div className="magazineblock group">
+      {/* <div className="magazineblock group">
         <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
           <a
             href="https://online.pubhtml5.com/hiwar/abef/"
@@ -59,7 +60,8 @@ const Publications = () => {
             </p>
           </a>
         </div>
-      </div>
+      </div> */}
+        <Publication/>
       <div
       className="info-rotate-right-text"
       ref={headerRef}
@@ -90,8 +92,8 @@ const Publications = () => {
           <br />
           An interdisciplinary group of academic and industrial researchers,
           practitioners,
-          <span id="abts">software developers</span>,
-          <span id="abts">end users</span>, and students who work together to
+          <span id="abts"> software developers</span>,
+          <span id="abts"> end users</span>, and students who work together to
           promote and support the growth and application of AI principles and
           techniques throughout computing.
         </motion.div>
