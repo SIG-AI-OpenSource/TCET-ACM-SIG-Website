@@ -29,6 +29,10 @@ async function main() {
   await mongoose.connect(db_url);
 }
 
+app.get("/",(req,res)=>{
+  res.json("Hello");
+});
+
 app.get("/events", async (req, res) => {
   try {
     let eventArray = await Event.find({ optionDate: 2023 });
