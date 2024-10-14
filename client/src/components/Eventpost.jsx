@@ -10,8 +10,13 @@ const Eventpost = () => {
     error,
   } = useFetch("http://localhost:8080/events"); // Adjust the URL if needed
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (loading) return <div className="text-center py-8">Loading...</div>;
+  if (error)
+    return (
+      <div className="text-center py-8 text-red-500">
+        Error: {error.message}
+      </div>
+    );
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -19,18 +24,22 @@ const Eventpost = () => {
   };
 
   return (
-    <div className="container mx-auto bg-blue-800 py-12 ">
-      <h1 className="text-white text-center text-7xl font-semibold mb-10 pb-10">
+    <div className="container mx-auto bg-blue-800 py-8 sm:py-12 px-4">
+      <h1 className="text-white text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 sm:mb-10 pb-6 sm:pb-10">
         Events
       </h1>
 
       {/* cards section */}
-      <div className="grid grid-cols-1 grid-cols-2 md:grid-cols-3 place-items-center gap-6 space-y-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {events &&
           events.map((event) => (
-            <Link to={`/events/${event._id}#top`} key={event._id}>
+            <Link
+              to={`/events/${event._id}#top`}
+              key={event._id}
+              className="flex justify-center"
+            >
               <motion.div
-                className="text-white  rounded-2xl overflow-hidden relative group shadow-2x"
+                className="text-white rounded-2xl overflow-hidden relative group shadow-2xl w-full max-w-[400px]"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -40,39 +49,36 @@ const Eventpost = () => {
                 <img
                   src={event.image.url}
                   alt={event.image.fileName}
-                  className=" w-full max-w-[400px] h-[410px] rounded-lg  object-cover"
+                  className="w-full h-[300px] sm:h-[350px] md:h-[410px] rounded-lg object-cover"
                   loading="lazy"
                 />
                 {/* overlay section */}
-                <div className="absolute left-0 top-[-100%] opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 group-hover:backdrop-blur-sm duration-500">
-                  <div className="space-y-7 pt-20">
-                    <motion.h2
-                      className="text-3xl font-bold text-center pt-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 }}
-                    >
-                      {event.title}
-                    </motion.h2>
-                    <motion.p
-                      className="text-lg text-center "
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      {event.date}
-                    </motion.p>
-                    <motion.div
-                      className="pl-36 ml-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
-                      <button className="border border-white px-4 py-2 rounded-lg hover:bg-black/20 duration-300">
-                        View
-                      </button>
-                    </motion.div>
-                  </div>
+                <div className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 p-4 w-full h-full bg-black/60 backdrop-blur-sm transition-opacity duration-300 flex flex-col justify-center items-center">
+                  <motion.h2
+                    className="text-2xl sm:text-3xl font-bold text-center mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    {event.title}
+                  </motion.h2>
+                  <motion.p
+                    className="text-base sm:text-lg text-center mb-6"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    {event.date}
+                  </motion.p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <button className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-800 transition-colors duration-300">
+                      View
+                    </button>
+                  </motion.div>
                 </div>
               </motion.div>
             </Link>
