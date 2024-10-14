@@ -28,7 +28,7 @@ const Pubs = () => {
   // });
 
   const viewsUpdater =(magazineid)=>{
-    console.log("Viewsupdated");
+    // console.log("Viewsupdated");
     // console.log(magazineid)
     let id = {id:magazineid,}
     axios.post(`http://localhost:8080/magazine`,id).then((response)=>{
@@ -52,7 +52,7 @@ const Pubs = () => {
           magazines.map((magazine) => (
             <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100" key={magazine._id}>
             
-            <a  key={magazine._id}
+            <a href={magazine.bookLink} key={magazine._id}
             target="_blank"
             rel="noopener noreferrer"
             className="center-magazine-content"

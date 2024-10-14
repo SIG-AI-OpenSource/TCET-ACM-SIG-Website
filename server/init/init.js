@@ -1,11 +1,13 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: "../.env" });
 const mongoose = require("mongoose");
 const initData = require("./data.js");
-const MONGO_URL = "mongodb://localhost:27017/TCET-ACM-EVENTS";
+const db_url =  process.env.ATLASDB_URL;
 const Event = require("../models/events.js");
 
 async function main() {
   try {
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(db_url);
     console.log("Connected to DB");
     await initDB();
     console.log("Data was initialized");

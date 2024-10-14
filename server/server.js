@@ -1,16 +1,20 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: "./.env" });
 const express = require("express");
 const mongoose = require("mongoose");
-const MONGO_URL = "mongodb://localhost:27017/TCET-ACM-EVENTS";
+const db_url =  process.env.ATLASDB_URL;
 const bodyParser = require("body-parser");
 const Event = require("./models/events.js"); // Changed to uppercase 'Event' for consistency
 const Magazine = require("./models/magazine.js");
 const cors = require("cors");
 const app = express();
-const dotenv = require("dotenv");
-dotenv.config({ path: "./.env" });
 const port = process.env.PORT || 8080;
 
-app.use(cors());
+app.use(cors({
+  origin:[""],
+  methods:["POST","GET"],
+  credentials:true,
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 main()
@@ -22,7 +26,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(db_url);
 }
 
 app.get("/events", async (req, res) => {
@@ -37,7 +41,7 @@ app.get("/events", async (req, res) => {
 
 app.post("/magazine", async(req,res)=>{
   try{
-  console.log("put request call");
+  // console.log("put request call");
   // console.log(req.params);
   // console.log(req.body.id);
   let magazine = req.body.id;
