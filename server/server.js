@@ -1,15 +1,22 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const MONGO_URL = "mongodb://localhost:27017/TCET-ACM-EVENTS";
-const Event = require("./models/events.js"); // Changed to uppercase 'Event' for consistency
-const cors = require("cors");
-const app = express();
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
+const express = require("express");
+const mongoose = require("mongoose");
+const db_url =  process.env.ATLASDB_URL;
+const bodyParser = require("body-parser");
+const Event = require("./models/events.js"); // Changed to uppercase 'Event' for consistency
+const Magazine = require("./models/magazine.js");
+const cors = require("cors");
+const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(cors());
-
+app.use(cors({
+  origin:[""],
+  methods:["POST","GET"],
+  credentials:true,
+}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 main()
   .then(() => {
     console.log("connected to DB");
@@ -19,7 +26,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(db_url);
 }
 
 app.get("/events", async (req, res) => {
@@ -31,6 +38,23 @@ app.get("/events", async (req, res) => {
     res.status(500).json({ error: "An error occurred while fetching events" });
   }
 });
+
+app.post("/magazine", async(req,res)=>{
+  try{
+  // console.log("put request call");
+  // console.log(req.params);
+  // console.log(req.body.id);
+  let magazine = req.body.id;
+  magazine.views+=1;
+  let magazineUpdated = await Magazine.findByIdAndUpdate(magazine._id,{...magazine});
+  // console.log(magazineUpdated);
+  // let magazine = await Magazine.findById
+  // let {id} = req.params;
+  } catch(error) {
+    console.error("Error updating viewNumber:",error);
+    res.status(500).json({error: "An error occured while updating views of magazine"})
+  }
+})
 
 app.get("/events/:id", async (req, res) => {
   try {
@@ -46,6 +70,28 @@ app.get("/events/:id", async (req, res) => {
     res
       .status(500)
       .json({ message: "Error retrieving event", error: err.message });
+  }
+});
+
+app.get("/publication", async (req, res) => {
+  try {
+    let magazineArray = await Magazine.find({optionDate:2023});
+    // console.log(magazineArray);
+    res.json(magazineArray);
+  } catch (error) {
+    console.error("Error fetching events:", error);
+    res.status(500).json({ error: "An error occurred while fetching events" });
+  }
+});
+
+app.get("/latestpublication", async (req, res) => {
+  try {
+    let magazineArray = await Magazine.find({latest:'yes'});
+    // console.log(magazineArray);
+    res.json(magazineArray);
+  } catch (error) {
+    console.error("Error fetching events:", error);
+    res.status(500).json({ error: "An error occurred while fetching events" });
   }
 });
 

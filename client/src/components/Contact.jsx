@@ -32,10 +32,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Web3Forms access key
-    const web3FormsAccessKey = "Paste_Your_api_Key";
-
+    const web3FormsAccessKey = JSON.stringify(import.meta.env.VITE_WEB3_FORMS_API);
     // Google Apps Script web app URL
-    const googleScriptURL = "Paste_Your_Google_API";
+    const googleScriptURL = JSON.stringify(import.meta.env.VITE_GOOGLE_SHEETS);
 
     try {
       // Submit to Web3Forms (for email)
@@ -119,14 +118,14 @@ const Contact = () => {
           </div>
           <div className="contact-links">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/tcet-acm-sig-ai-9515072b9"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="link-logo" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/tcet_acm.sigai/"
               target="_blank"
               rel="noopener noreferrer"
             >

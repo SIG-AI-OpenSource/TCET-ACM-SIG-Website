@@ -16,24 +16,31 @@ import { motion, useInView, useAnimation } from "framer-motion";
 const Home = () => {
 
   const options = {hour12:false,hour:'2-digit'};
+  const optionsForDate = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
   const [time,setTime] = useState(parseInt(new Date().toLocaleTimeString("en-IN",options)));
-
+  const [day,setDay] = useState(parseInt(new Date().toLocaleDateString("en-IN",{ day: '2-digit' })));
+  const [month,setMonth] = useState(parseInt(new Date().toLocaleDateString("en-IN",{ month: '2-digit' })));
 
   const [heroLink,setHeroLink] = useState("");
 
-  const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png"," https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png"]
+  const heroImageLink = ["https://res.cloudinary.com/df9us90ur/image/upload/v1727143046/heroimagenight.png","https://res.cloudinary.com/divj3y2cp/image/upload/v1727876473/MorningEveningSIGAI.jpg","https://res.cloudinary.com/df9us90ur/image/upload/v1727143054/heroimageworkinghours.png","https://res.cloudinary.com/divj3y2cp/image/upload/v1727876524/IndependencerepublicSIGAI.png"]
   useEffect(
     ()=>{
-      if(time>=10&&time<17){
-        console.log(time);
+      if ((day==15 && month==8)||(day==26 && month==1)){
+        setHeroLink(heroImageLink[3]);
+      }
+      else if(time>=10&&time<17){
         setHeroLink(heroImageLink[2]);
       } 
       else if((time>6&&time<10)||(time>=17&&time<19)){
-        console.log(time);
         setHeroLink(heroImageLink[1]);
       }
       else if((time>=19&&time<24)||(time>=0&&time<6)){
-        console.log(time);
         setHeroLink(heroImageLink[0]);
       }
     }
@@ -45,7 +52,7 @@ const Home = () => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    console.log(isInView);
+    // console.log(isInView);
     if (isInView) {
       mainControls.start("visible");
     }
@@ -55,7 +62,7 @@ const Home = () => {
 
   // https://www.kasradesign.com/wp-content/uploads/2023/06/AI-generated-image-abstract-feel-1.jpg
   return (
-    <div ref={ref}>
+    <div ref={ref} className="backgroundglitchfix">
       <div id="home">
         <img
 
@@ -94,8 +101,9 @@ const Home = () => {
 
           {/* Learn More Button */}
           <a
-            href="#"
+            href="#aboutus"
             className="mt-5 bg-purple-600 text-white py-3 px-6 rounded-full text-lg font-medium hover:bg-purple-800 transition homeheroatag"
+            
           >
             Learn more →
           </a>
