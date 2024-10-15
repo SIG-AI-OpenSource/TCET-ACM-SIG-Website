@@ -12,7 +12,7 @@ const port = process.env.PORT || 8080;
 
 app.use(express.json())
 app.use(cors({
-  origin:[""],
+  origin:["https://tcet-acm-sig-website.vercel.app/"],
   methods:["POST","GET"],
   credentials:true,
 }));
