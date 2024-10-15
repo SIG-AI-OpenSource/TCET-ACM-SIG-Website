@@ -31,7 +31,7 @@ async function main() {
 }
 
 app.get("/",(req,res)=>{
-  res.json("Hello");
+  res.send("Hello");
 });
 
 app.get("/events", async (req, res) => {
