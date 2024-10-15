@@ -8,7 +8,7 @@ const Eventpost = () => {
     data: events,
     loading,
     error,
-  } = useFetch("http://localhost:8080/events"); // Adjust the URL if needed
+  } = useFetch("https://tcet-acm-sig-website-h6er.vercel.app/events"); // Adjust the URL if needed
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;

@@ -10,8 +10,9 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 8080;
 
+app.use(express.json())
 app.use(cors({
-  origin:[""],
+  origin:["https://tcet-acm-sig-website.vercel.app/"],
   methods:["POST","GET"],
   credentials:true,
 }));
@@ -28,6 +29,14 @@ main()
 async function main() {
   await mongoose.connect(db_url);
 }
+
+app.get("/",(req,res)=>{
+  res.json("Hello");
+});
+
+app.get("/test",(req,res)=>{
+  res.json("Hello testing route");
+});
 
 app.get("/events", async (req, res) => {
   try {
