@@ -31,11 +31,11 @@ async function main() {
 }
 
 app.get("/",(req,res)=>{
-  res.send("Hello");
+  res.json("Hello");
 });
 
 app.get("/test",(req,res)=>{
-  res.send("Hello testing route");
+  res.json("Hello testing route");
 });
 
 app.get("/events", async (req, res) => {
