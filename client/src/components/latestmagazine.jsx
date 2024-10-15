@@ -11,7 +11,7 @@ const Pubs = () => {
     data: magazines,
     loading,
     error,
-  } = useFetch("http://localhost:8080/latestpublication"); // Adjust the URL if needed
+  } = useFetch("https://tcet-acm-sig-website-h6er.vercel.app/latestpublication"); // Adjust the URL if needed
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -31,7 +31,7 @@ const Pubs = () => {
     // console.log("Viewsupdated");
     // console.log(magazineid)
     let id = {id:magazineid,}
-    axios.post(`http://localhost:8080/magazine`,id).then((response)=>{
+    axios.post(`https://tcet-acm-sig-website-h6er.vercel.app/magazine`,id).then((response)=>{
       console.log(response.status, response.data.token);
     })
   };

@@ -74,9 +74,9 @@ const Header = () => {
       transition={{ duration: 0.3 }}
     >
       <div className="text-2xl pl-16 logodiv sm:text-sm">
-        <Link to="/">
+        <Hlink to="/">
           <div className="logo"></div>
-        </Link>
+        </Hlink>
         <div className="circle">
           <span style={{ "--i": 1 }}>T</span>
           <span style={{ "--i": 2 }}>C</span>

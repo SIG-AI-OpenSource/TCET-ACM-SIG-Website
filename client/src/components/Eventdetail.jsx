@@ -6,7 +6,7 @@ import useFetch from "../services/useFetch";
 const Eventdetail = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch(
-    `http://localhost:8080/events/${id}`
+    `https://tcet-acm-sig-website-h6er.vercel.app/events/${id}`
   );
 
   useEffect(() => {
