@@ -34,6 +34,10 @@ app.get("/",(req,res)=>{
   res.send("Hello");
 });
 
+app.get("/test",(req,res)=>{
+  res.send("Hello testing route");
+});
+
 app.get("/events", async (req, res) => {
   try {
     let eventArray = await Event.find({ optionDate: 2023 });
