@@ -32,9 +32,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Web3Forms access key
-    const web3FormsAccessKey = JSON.stringify(import.meta.env.VITE_WEB3_FORMS_API);
+    const web3FormsAccessKey = import.meta.env.VITE_WEB3_FORMS_API;
     // Google Apps Script web app URL
-    const googleScriptURL = JSON.stringify(import.meta.env.VITE_GOOGLE_SHEETS);
+    const googleScriptURL = import.meta.env.VITE_GOOGLE_SHEETS;
 
     try {
       // Submit to Web3Forms (for email)

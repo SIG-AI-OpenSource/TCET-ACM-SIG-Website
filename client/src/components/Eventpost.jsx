@@ -8,13 +8,14 @@ const Eventpost = () => {
     data: events,
     loading,
     error,
-  } = useFetch("https://tcet-acm-sig-website-h6er.vercel.app/events"); // Adjust the URL if needed
-
+  } = useFetch(import.meta.env.VITE_BACKEND_URL+"/events"); // Adjust the URL if needed
   if (loading) return <div className="text-center py-8">Loading...</div>;
   if (error)
     return (
+      
       <div className="text-center py-8 text-red-500">
         Error: {error.message}
+        
       </div>
     );
 

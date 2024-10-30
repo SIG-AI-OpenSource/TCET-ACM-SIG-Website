@@ -13,7 +13,7 @@ const Publications = () => {
     <div className="publications" id="publication" ref={headerRef}>
       <div className="titleyear w-screen">
         <div className="publicationstitle">Publications</div>
-        <div className="publicationyear">2023-24</div>
+        <div className="publicationyear">Latest</div>
       </div>
       {/* <div className="magazineblock group">
         <div className="mag_1 cursor-pointer duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">

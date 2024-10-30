@@ -12,10 +12,12 @@ const port = process.env.PORT || 8080;
 
 app.use(express.json())
 app.use(cors({
-  origin:["https://tcet-acm-sig-website.vercel.app/"],
+  origin:[process.env.FRONTEND_URL],
   methods:["POST","GET"],
   credentials:true,
+  allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
 }));
+// Getting preflight cors error need to fix it 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 main()

@@ -4,10 +4,8 @@ import useFetch from "../services/useFetch";
 
 const Eventdetail = () => {
   const { id } = useParams();
-  const { loading, error, data } = useFetch(
-    `https://tcet-acm-sig-website-h6er.vercel.app/events/${id}`
+  const { loading, error, data } = useFetch(import.meta.env.VITE_BACKEND_URL+"/events/"+ id
   );
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

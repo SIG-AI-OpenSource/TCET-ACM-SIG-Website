@@ -67,11 +67,15 @@ const Faculty = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://res.cloudinary.com/ds8oawwu2/image/upload/v1726138307/WhatsApp_Image_2024-09-06_at_19.32.08_guwfma.jpg"
+              src="https://res.cloudinary.com/df9us90ur/image/upload/v1729422372/ShiwaniGupta.jpg"
               alt="Profile picture"
               className="object-cover w-full h-full rounded-2xl"
             />
           </motion.div>
+          {/* https://res.cloudinary.com/ds8oawwu2/image/upload/v1726138307/WhatsApp_Image_2024-09-06_at_19.32.08_guwfma.jpg
+           
+           https://shorturl.at/05KIo
+           */}
           <motion.div
             className="w-full md:w-2/3 pl-0 p-6 sm:p-6 md:p-8 flex flex-col justify-between"
             ref={textRef1}
@@ -85,11 +89,7 @@ const Faculty = () => {
               </h2>
               <p className="text-sm text-gray-400 mb-4">Head of Department</p>
               <p className="text-xl mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ut massa in mauris suscipit ultrices quis eu tellus.
-                Pellentesque metus magna, ultricies non hendrerit at, rutrum
-                quis ante. In porttitor ex ac ligula convallis, at vulputate
-                enim consequat.
+              Dr. Shiwani Gupta, the HOD of the Department of Artificial Intelligence and Machine Learning (AIML), is a dedicated educator with over 20 years of experience in academia. She holds a Ph.D. in Technology from Mumbai University, where her doctorate research includes significant contributions in Machine Learning and AI applications. Her work has been widely published, including studies on online signature recognition, healthcare optimization using machine learning, and advanced feature selection algorithms for heart disease datasets in prestigious journals and IEEE conferences. Dr. Gupta's commitment to accessible learning and research excellence has made her a driving force in fostering institutional growth and innovation through roles like Infosys Campus Connect Trainer and R&D Coordinator.
               </p>
             </div>
             <div className="flex space-x-4">
@@ -129,7 +129,7 @@ const Faculty = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <img
-              src="https://shorturl.at/05KIo"
+              src="https://res.cloudinary.com/df9us90ur/image/upload/v1729422373/PranjaliSankhe.jpg"
               alt="Profile picture"
               className="object-cover w-full h-full rounded-2xl"
             />
@@ -147,10 +147,7 @@ const Faculty = () => {
               </h2>
               <p className="text-sm text-gray-400 mb-4">Faculty Incharge</p>
               <p className="text-xl mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ut massa in mauris suscipit ultrices quis eu tellus.
-                Pellentesque metus magna, ultricies non hendrerit at, rutrum
-                quis ante.
+              Mrs. Pranjali Sankhe, the faculty in charge of the TCET ACM SIGAI Committee, specializes in Machine Learning, Computer Networking, and Security. With experience as a trainer at the Central Bank of India for Computer Networking and Cybersecurity, she has also completed certifications from Infosys Springboard and Microsoft. Her research contributions include publications on chronic disease prediction, image cryptography, and motion capture visualization in prominent conferences such as IEEE and IC-ICN. Passionate about advancing intelligent computing, Mrs. Sankhe actively engages in academic research and professional development in emerging technologies.
               </p>
             </div>
             <div className="flex space-x-4">

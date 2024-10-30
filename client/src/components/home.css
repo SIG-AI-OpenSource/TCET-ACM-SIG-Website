@@ -414,7 +414,7 @@
     background-color: #015B97;
     padding-top: 4%;
     padding-left: 2%;
-    padding-bottom: 6%;
+    padding-bottom: 0%;
   }
   
   .publicationstitle{
@@ -730,9 +730,9 @@ footer{
     display:flex;
     justify-content:center;
     align-items: center;
-    background-color:#C7E8FF;
+    background-color:#F0F8FE;
   }
-  
+  /* #C7E8FF */
   .map{
     width:70%;
     height: 70vh;
